@@ -17,28 +17,51 @@
             padding: 5px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             margin: 20px 0;
-            border: 2px solid #0099ff;
+            border: 10px solid #0099ff;
+            max-width: 300px;
+            width: 100%;
         }
-
-        /*input[type="range"] {*/
-        /*    accent-color: initial;*/
-        /*    -webkit-appearance: none;*/
-        /*    width: 100%;*/
-        /*    background: transparent;*/
-        /*    outline: none;*/
-        /*}*/
-
-        /*#scrubber::-webkit-slider-thumb,*/
-        /*#volume::-webkit-slider-thumb {*/
-        /*    -webkit-appearance: none;*/
-        /*    background: #000;*/
-        /*    border: 2px solid #0096ff;*/
-        /*    border-radius: 50%;*/
-        /*    width: 18px;*/
-        /*    height: 18px;*/
-        /*    cursor: pointer;*/
-        /*    transition: background 0.2s;*/
-        /*    position: relative;}*/
+        /*
+        this styles the slider bar itself not the thumb
+        */
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: #333333;
+            height: 4px;
+            outline: none;
+            border-radius: 2px;
+        }
+        /*
+        this styles the thumb of the sliders
+        */
+        #scrubber::-webkit-slider-thumb,#volume::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background: #000;
+        border: 2px solid #0096ff;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        transition: background 0.2s;
+        position: relative;}
+        /*
+        this changes the start/pause button appearance.
+        changes the color, size, and font, adds padding and a border radius
+        */
+        #playPauseBtn,#muteBtn{
+            background: #0096ff;
+            border : 2px solid #333333;
+            border-radius: 10px;
+            padding: 3px 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: .8em;
+            font-family: sans-serif;
+        }
+        #playPauseBtn:hover,#muteBtn:hover{
+            background: #007acc;
+        }
 
     </style>
 </head>
@@ -67,20 +90,37 @@
     <audio
             id="myAudio" src="images-and-files/Bleue.mp3" style="display: none;">
     </audio>
+<!--
+ this is a division for custom controls for the audio player. It includes
+ a play/pause button, current time display, scrubber (seek bar), time left display, and volume control.
 
+-->
     <div id="custom-controls" style="display: flex; align-items: center; gap: 10px;">
         <button id="playPauseBtn">Start</button>
+        <!--
+        this span displays the current time of the audio in MM:SS format
+        -->
         <span id="current-time">0:00</span>
-        <input id="scrubber" type="range" min="0" value="0" step="0.1" style="flex: .4;">
+        <!--
+        this input range slider allows the user to seek through the audio track
+        -->
+        <input id="scrubber" type="range" min="0" value="0" step="0.1" style="flex: 1;">
         <span id="time-left">-0:00</span>
-        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5"
-            style="width: 40px; height: 80px; writing-mode: bt-lr; transform: rotate(270deg);">
 
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5"
+            style="width: 33px; height: 4px; writing-mode: bt-lr; transform: rotate(270deg);">
+        <button id="muteBtn">Mute</button>
     </div>
 
 
 
+
+    <!--
+        This script adds functionality to the custom audio controls.
+        It handles play/pause, volume control, updating the scrubber and time displays,
+    -->
     <script>
+        const muteBtn = document.getElementById('muteBtn');
         const playPauseBtn = document.getElementById('playPauseBtn');
         const myAudio = document.getElementById('myAudio');
         const scrubber = document.getElementById('scrubber');
@@ -90,6 +130,11 @@
 
         myAudio.volume = 0.5;
 
+        muteBtn.addEventListener('click',()=>{
+            myAudio.muted = !myAudio.muted;
+            muteBtn.textContent = myAudio.muted ? 'Unmute' : 'Mute';
+
+        });
         playPauseBtn.addEventListener('click', () => {
             if (myAudio.paused) {
                 myAudio.play();
@@ -97,7 +142,13 @@
                 myAudio.pause();
             }
         });
+        volume.addEventListener('input', () => {
+            myAudio.volume = volume.value;
+        });
 
+        /*
+        These event listeners update the play/pause button text based on the audio state.
+        */
         myAudio.addEventListener('play', () => {
             playPauseBtn.textContent = 'Pause';
         });
@@ -105,6 +156,16 @@
         myAudio.addEventListener('pause', () => {
             playPauseBtn.textContent = 'Start';
         });
+        /*
+        This function adds dragging functionality to the scrubber and volume sliders.
+        */
+
+        let lastVolume = volume.value;
+        volume.addEventListener('input', () => {
+            myAudio.volume = parseFloat(volume.value);
+            myAudio.muted = myAudio.volume === 0;
+        });
+
 
         function addDragEvents(slider) {
             slider.addEventListener('mousedown', () => slider.classList.add('dragging'));
@@ -112,14 +173,22 @@
             slider.addEventListener('touchstart', () => slider.classList.add('dragging'));
             document.addEventListener('touchend', () => slider.classList.remove('dragging'));
         }
-        addDragEvents(document.getElementById('scrubber'));
-        addDragEvents(document.getElementById('volume'));
-        myAudio.addEventListener('loadedmetadata', () => {
-            scrubber.max = myAudio.duration;
+            addDragEvents(document.getElementById('scrubber'));
+            addDragEvents(document.getElementById('volume'));
+            myAudio.addEventListener('loadedmetadata', () => {
+                scrubber.max = myAudio.duration;
         });
 
         myAudio.addEventListener('timeupdate', () => {
+        // This function formats time in seconds to MM:SS format
+        // so that the music player displays time correctly.
+        function formatTime(seconds) {
+            seconds = Math.max(0, Math.floor(seconds));
+            const min = Math.floor(seconds / 60);
+            const sec = seconds % 60;
+            return `${min}:${sec.toString().padStart(2, '0')}`;
 
+        }
             scrubber.value = myAudio.currentTime;
             currentTime.textContent = formatTime(myAudio.currentTime);
             timeLeft.textContent = '-' + formatTime(myAudio.duration - myAudio.currentTime);
