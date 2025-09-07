@@ -3,17 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <title>Favorite Song</title>
+    <style>
+
+        body {
+            background-color: #0096ff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #custom-controls {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0096ff;
+            color: #222;
+            border-radius: 12px;
+            padding: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin: 20px 0;
+            border: 2px solid #0099ff;
+        }
+
+        /*input[type="range"] {*/
+        /*    accent-color: initial;*/
+        /*    -webkit-appearance: none;*/
+        /*    width: 100%;*/
+        /*    background: transparent;*/
+        /*    outline: none;*/
+        /*}*/
+
+        /*#scrubber::-webkit-slider-thumb,*/
+        /*#volume::-webkit-slider-thumb {*/
+        /*    -webkit-appearance: none;*/
+        /*    background: #000;*/
+        /*    border: 2px solid #0096ff;*/
+        /*    border-radius: 50%;*/
+        /*    width: 18px;*/
+        /*    height: 18px;*/
+        /*    cursor: pointer;*/
+        /*    transition: background 0.2s;*/
+        /*    position: relative;}*/
+
+    </style>
 </head>
 <body>
+
  <h1>Favorite Song</h1>
  <h4>&nbsp;&nbsp;&nbsp;&nbsp;Bleue by Wale The Sage </h4>
- <a>
-     Original Video: <a href="https://www.youtube.com/watch?v=Z4b8kz4gG7I"
+
+     Original Video: <a href="https://youtu.be/hv4UsNih-_c?si=cpNv9os-neEEaoPo"
          target="_blank"
          title="Goes to music video">
          Bleue by Wale The Sage
  </a>
- <hr>
+     <br>
+ <a href="https://youtu.be/hv4UsNih-_c?si=cpNv9os-neEEaoPo"
+         target="_blank"
+         title="Wale The Sage Music Video">
+ <img src="images-and-files/BleueCov.jpg"
+        alt="Bleue Album Cover"
+        width="300"
+        style="border: 2px solid #000;">
+ </a>
+
+ <hr style="border: 1px solid #000;">
+
+    <audio
+            id="myAudio" src="images-and-files/Bleue.mp3" style="display: none;">
+    </audio>
+
+    <div id="custom-controls" style="display: flex; align-items: center; gap: 10px;">
+        <button id="playPauseBtn">Start</button>
+        <span id="current-time">0:00</span>
+        <input id="scrubber" type="range" min="0" value="0" step="0.1" style="flex: .4;">
+        <span id="time-left">-0:00</span>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5"
+            style="width: 40px; height: 80px; writing-mode: bt-lr; transform: rotate(270deg);">
+
+    </div>
+
+
+
+    <script>
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const myAudio = document.getElementById('myAudio');
+        const scrubber = document.getElementById('scrubber');
+        const currentTime = document.getElementById('current-time');
+        const timeLeft = document.getElementById('time-left');
+        const volume = document.getElementById('volume');
+
+        myAudio.volume = 0.5;
+
+        playPauseBtn.addEventListener('click', () => {
+            if (myAudio.paused) {
+                myAudio.play();
+            } else {
+                myAudio.pause();
+            }
+        });
+
+        myAudio.addEventListener('play', () => {
+            playPauseBtn.textContent = 'Pause';
+        });
+
+        myAudio.addEventListener('pause', () => {
+            playPauseBtn.textContent = 'Start';
+        });
+
+        function addDragEvents(slider) {
+            slider.addEventListener('mousedown', () => slider.classList.add('dragging'));
+            document.addEventListener('mouseup', () => slider.classList.remove('dragging'));
+            slider.addEventListener('touchstart', () => slider.classList.add('dragging'));
+            document.addEventListener('touchend', () => slider.classList.remove('dragging'));
+        }
+        addDragEvents(document.getElementById('scrubber'));
+        addDragEvents(document.getElementById('volume'));
+        myAudio.addEventListener('loadedmetadata', () => {
+            scrubber.max = myAudio.duration;
+        });
+
+        myAudio.addEventListener('timeupdate', () => {
+
+            scrubber.value = myAudio.currentTime;
+            currentTime.textContent = formatTime(myAudio.currentTime);
+            timeLeft.textContent = '-' + formatTime(myAudio.duration - myAudio.currentTime);
+        });
+        scrubber.addEventListener('input', () => {
+            myAudio.currentTime = scrubber.value;
+        });
+
+    </script>
+
     <pre>
         [Intro]
     Ayy, give a fuck
@@ -56,6 +172,7 @@
     If your path was full of streams, I guess you swim and don't walk
     I'm all alone all day, I know, I'm on the phone, I feel stuck
     Going ghost, I don't exist, show me the road, I feel lost
+    Going ghost, I don't exist, show me the road, I feel lost
     Go like hi, hi, bye, bye, but we don't stop
     If your path was full of streams, I guess you swim and don't walk
     I'm all alone all day, I know, I'm on the phone, I feel stuck
@@ -97,6 +214,7 @@
     I'm all alone all day, I know, I'm on the phone, I feel stuck
     Going ghost, I don't exist, show me the road, I feel lost
     </pre>
+
 
 </body>
 </html>
