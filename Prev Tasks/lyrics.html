@@ -62,6 +62,12 @@
         #playPauseBtn:hover,#muteBtn:hover{
             background: #007acc;
         }
+        .media-row{
+        display:flex;
+        alight-items: center;
+        gap: 10px;
+        padding-top: 10px;
+        }
 
     </style>
 </head>
@@ -76,20 +82,44 @@
          Bleue by Wale The Sage
  </a>
      <br>
- <a href="https://youtu.be/hv4UsNih-_c?si=cpNv9os-neEEaoPo"
+     <!--
+         This combines the img and video so that they can be viewed next to eachother.
+     -->
+ <div class="media-row" >
+
+    <a href="https://youtu.be/hv4UsNih-_c?si=cpNv9os-neEEaoPo"
          target="_blank"
          title="Wale The Sage Music Video">
- <img src="images-and-files/BleueCov.jpg"
+        <img src="images-and-files/BleueCov.jpg"
         alt="Bleue Album Cover"
         width="300"
         style="border: 2px solid #000;">
- </a>
+    </a>
+
+        <a href="https://youtu.be/hv4UsNih-_c?si=YJNKagjru9GLxoLH"
+            target="_blank"
+            title="Wale The Sage Music Video">
+            <!--
+            this will be a video imbed of the youtube video for wale the sage
+            -->
+            <video src="images-and-files/Bleue.mp4" width="415px" controls autoplay muted loop
+            <!--        if i have webm
+                        <source src="Bleue.mp4" type="video/mp4">
+                        <source src="Bleue.webm" type="video/webm">
+            -->
+            ></video>
+        </a>
+
+
+
+ </div>
 
  <hr style="border: 1px solid #000;">
 
     <audio
             id="myAudio" src="images-and-files/Bleue.mp3" style="display: none;">
     </audio>
+    <audio>src=""</audio>
 <!--
  this is a division for custom controls for the audio player. It includes
  a play/pause button, current time display, scrubber (seek bar), time left display, and volume control.
