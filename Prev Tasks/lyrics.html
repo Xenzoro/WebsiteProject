@@ -135,7 +135,7 @@
 
 -->
     <div id="custom-controls" style="display: flex; align-items: center; gap: 10px;">
-        <button id="playPauseBtn">Start</button>
+        <button id="playPauseBtn">Play</button>
         <!--
         this span displays the current time of the audio in MM:SS format
         -->
@@ -193,7 +193,7 @@
         });
 
         myAudio.addEventListener('pause', () => {
-            playPauseBtn.textContent = 'Start';
+            playPauseBtn.textContent = 'Play';
         });
         /*
         This function adds dragging functionality to the scrubber and volume sliders.
