@@ -20,3 +20,18 @@ background-color: #333333;
 .a:visited{
     color: white;
 }
+
+
+li:hover{
+    background-color: yellow;
+}
+
+li:not(:hover){
+    background-color: #333333;
+    color: #333333;
+}
+
+/*li:nth-child(3n){*/
+/*    background-color: #0099ff;*/
+/*}*/
+
