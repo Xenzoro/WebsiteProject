@@ -19,4 +19,33 @@ body{
     border-radius: 10px;
 }
 
+h1::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+
+p::first-line{
+    background-color: teal;
+}
+p::selection{
+    color:white;
+    background-color: darkgreen;
+}
+#fruit li::before{
+    content: "✔️";
+}
+#apple::after{
+    content: "🍎"
+}
+#orange::after{
+    content: "🍊"
+}
+#banana::after{
+    content: "🍌"
+}
+
+#fruit li::marker{
+    content: "✅";
+    font-size: 2.2em;
+}
 
