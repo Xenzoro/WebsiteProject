@@ -1,0 +1,22 @@
+body{
+background-color: #333333;
+}
+
+.a:link{
+    color: aliceblue;
+}
+
+.a:hover{
+    color: #06344e;
+    font-size: 1.1em;
+
+}
+
+.a:active{
+    font-size: 1.1em;
+    color: black;
+}
+
+.a:visited{
+    color: white;
+}
