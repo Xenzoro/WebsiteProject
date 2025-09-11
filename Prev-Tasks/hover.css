@@ -1,0 +1,22 @@
+body{
+    background: #333333;
+
+}
+
+#greeting p{
+    background-color: blue;
+    padding: 10px;
+    visibility: hidden;
+    display: inline-block;
+
+
+}
+
+#greeting:hover p{
+    display: inline-block;
+    visibility: visible;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
