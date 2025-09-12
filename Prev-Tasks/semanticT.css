@@ -21,7 +21,7 @@ aside{
     float: left;
     padding:10px;
 }
-section{
+#section1{
     width: 40%;
     float: left;
     padding:10px;
@@ -38,11 +38,42 @@ footer{
     text-align: center;
     padding: 25px;
 }
+#food{
+    width: 100%;
+    padding:10px;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+}
+.gallery{
+    display: inline-block;
+    border: 2px solid #1e1e1e;
+    margin: 25px;
+    width: 200px;
+}
+.gallery .desc{
+    padding: 10px;
+    text-align: center;
+
+}
+.gallery:hover{
+    border: 2px solid #464646;
+    transform: scale(1.1);
+    box-shadow:2px 2px 10px #269cd4;
+
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+
 /*if the width is 600px or below we can change properties*/
 /*allows mobile viewing its responsive css*/
 @media screen and (max-width: 600px){
-    aside,section,article{
+    aside,section,article,.gallery{
         width: 100%;
     }
 }
+
+
 
