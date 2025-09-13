@@ -17,13 +17,13 @@ body{
     padding: 12px 24px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center all buttons as a group */
+    justify-content: space-evenly; /* Center all buttons as a group */
 }
 
 .liquid-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
     height: 100%;
     background: transparent;
     gap: 32px;
@@ -116,5 +116,3 @@ body{
     opacity: 0.5;
     transform: scale(2);
 }
-
-/* Remove unused .contact-wrapper class */
