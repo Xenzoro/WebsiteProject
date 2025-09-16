@@ -205,16 +205,16 @@ transition: transform .5s ease
     #navbar{
         display: none;
     }
-    #hamburger{
-        display: block;
-    }
-    #mobile-navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background: rgba(38, 156, 212, 0.95);
-        padding: 10px 0;
-    }
+    /*#hamburger{*/
+    /*display: none;*/
+    /*}*/
+    /*#mobile-navbar {*/
+    /*    position: fixed;*/
+    /*    top: 0;*/
+    /*    left: 0;*/
+    /*    width: 100%;*/
+    /*    z-index: 1000;*/
+    /*    background: rgba(38, 156, 212, 0.95);*/
+    /*    padding: 10px 0;*/
+    /*}*/
 }
