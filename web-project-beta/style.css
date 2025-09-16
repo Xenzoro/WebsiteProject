@@ -23,13 +23,19 @@ body{
     justify-content: space-evenly; /* Center all buttons as a group */
     position: fixed;
     top: 0;
-
+    /*THIS IS NECCESARY DO NOT DELETE*/
     transition: transform .5s ease ;
         }
 
 .hidden-navbar{
     transform: translateY(-110%);
     transition: transform 0.5s ease;
+}
+/*right shift navbar*/
+.hidden-navbar-rs{
+    transform: translateX(110%);
+    transition: transform 0.5s ease;
+
 }
 
 
@@ -135,7 +141,7 @@ display: block;
 position: fixed;
 top: 8px;
 right: 20px;
-z-index: 1100;
+z-index: 1200;
 background: #333333;
 color: #fff;
 border: none;
@@ -144,13 +150,73 @@ border-radius: 8px;
 padding: 8px 16px;
 cursor: pointer;
 }
-#hamburger:hover{
-    transform: scale(1.2);
+
+.hamburg-container {
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    /*height: 100%;*/
+    /*background: transparent;*/
+    /*gap: 32px;*/
+}
+.hamburger-element {
+position: relative;
+overflow: hidden;
 
 }
+.hamburger-element::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+            #269cd4 0deg,
+            #333333 120deg,
+            #269cd4 240deg
+    );
+    transition: all 0.6s ease;
+    opacity: 0;
+    transform: scale(0);
+    z-index: -1;
+}
+.hamburger-element:hover::before {
+     opacity: 0.5;
+     transform: scale(2);
+ }
+.hamburger-element span {
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+
+#hamburger:hover
+{
+    width: 60px;
+    height: 60px;
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*position: relative;*/
+    border-radius: 50px;
+    /*overflow: hidden;*/
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    text-decoration: none;
+    color: #fff;
+    /*font-weight: 600;*/
+    font-size: 1.8rem;
+    /*margin: 0;*/
+    /*padding: 0;*/
+}
+/**/
 
 #mobile-navbar {
-
 height: 100%;
 width: 80%;
 max-width: 360px;
