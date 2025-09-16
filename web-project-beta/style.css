@@ -23,13 +23,19 @@ body{
     justify-content: space-evenly; /* Center all buttons as a group */
     position: fixed;
     top: 0;
-
+    /*THIS IS NECCESARY DO NOT DELETE*/
     transition: transform .5s ease ;
         }
 
 .hidden-navbar{
     transform: translateY(-110%);
     transition: transform 0.5s ease;
+}
+/*right shift navbar*/
+.hidden-navbar-rs{
+    transform: translateX(110%);
+    transition: transform 0.5s ease;
+
 }
 
 
@@ -145,7 +151,7 @@ padding: 8px 16px;
 cursor: pointer;
 }
 #hamburger:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 
 }
 
