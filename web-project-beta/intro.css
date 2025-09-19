@@ -1,0 +1,21 @@
+@font-face{
+    src:url(project-files/archivo.ttf);
+    font-family:archivo;
+}
+*{box-sizing:border-box;}
+
+body{
+    background-color: #333333;
+    font-family: archivo, serif;
+}
+
+#intro{
+    margin-top:auto;
+    display:flex;
+}
+#intro h1{
+    margin-top:100px;
+    justify-content: right;
+
+    background-color: #269cd4;
+}
