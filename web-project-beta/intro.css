@@ -12,10 +12,65 @@ body{
 #intro{
     margin-top:auto;
     display:flex;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center; /* Align items both horizontally and vertically */
+    height: 50vh; /* Full viewport height */
 }
 #intro h1{
+    justify-content: center;
+    /*align-items: center;*/
+    display:flex;
     margin-top:100px;
-    justify-content: right;
-
-    background-color: #269cd4;
+    font-size:4rem;
+    color: #fff;
+    background:
+    linear-gradient(to right,
+    rgba(38, 156, 212, 0.85) 0%,
+    rgba(38, 156, 212, 0.85) 50%,
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.85) 100%);
+    background-size: 100% 0.1em, 0 0.1em;
+    background-repeat: no-repeat;
+    background-position : 100% 100%;
+    /*background*/
+    /*background-color: #ffffff;*/
 }
+
+.intro-flex{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+#profile-pic{
+    margin-left:50px;
+    display: flex;
+    border:10px solid rgba(38, 156, 212, 0.85);
+    height:auto;
+    width:30%;
+    border-radius: 50%;
+}
+#intro-text{
+    color: #e8e8e8;
+    font-size: 1.4rem;
+    display:block;
+    flex-direction: row;
+
+
+}
+.my-name{
+    color: #269cd4;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/*.about-me-underline{*/
+
+/*    width:30%;*/
+/*    border: 2px solid #269cd4;*/
+/*    margin-bottom: 20px;*/
+
+/*}*/

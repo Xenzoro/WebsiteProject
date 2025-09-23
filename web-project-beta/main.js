@@ -63,6 +63,7 @@ document.addEventListener("click", function(event) {
         navbar.classList.remove("hidden-navbar");
     }
 });
+
 })();
 //debounce resize event
 let resizeTimeout;
