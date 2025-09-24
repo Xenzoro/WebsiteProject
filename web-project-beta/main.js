@@ -10,6 +10,11 @@ const mobileNavbar = document.getElementById("mobile-navbar");
     window.addEventListener("scroll", function() {
         const current = window.scrollY;
         const mobileActive = !mobileNavbar.classList.contains("hidden-navbar");
+        const isMobile = window.innerWidth <= 800;
+        if(isMobile){
+            navbar.classList.add("hidden-navbar");
+            return;h
+        }
         if (mobileActive) {
             navbar.style.display = "none";
             return;

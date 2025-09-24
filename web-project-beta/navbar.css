@@ -25,6 +25,7 @@ body{
     top: 0;
     /*THIS IS NECCESARY DO NOT DELETE*/
     transition: transform .5s ease ;
+    z-index: 1000;
         }
 
 .hidden-navbar{
