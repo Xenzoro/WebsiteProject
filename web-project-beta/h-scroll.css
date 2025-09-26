@@ -11,17 +11,40 @@ img{
     height: 100%;
     object-fit: cover;
 }
-#h-section{
+section{
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
+
+.logo{
+    flex: 3;
+}
+
+.log-img{
+    width: 120px;
+}
+
+.tagline,
+.about {
+    flex: 1;
+}
+
+nav p {
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+nav p span {
+    color: grey;
+}
 .h-h1{
     text-transform: uppercase;
     font-size: 4vw;
     font-weight: 500;
-    color: #1f1f1f;
+    color: black;
 }
 
 .hero, .outro {
@@ -33,11 +56,57 @@ img{
 .sticky{
     background-color: #282828;
 }
-.title{
+.titles{
     position: absolute;
     top: 0%;
     left: 0%;
     width: 400vw;
     height: 100vh;
     display: flex;
+    will-change: transform;
+}
+.title{
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:9vw;
+    font-style: italic;
+    will-change: transform;
+}
+h1.title-1{
+    color: #269cd4;
+}
+h1.title-2{
+    color: #3f3f3f;
+}
+h1.title-3{
+    color: black;
+}
+.images{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250vw;
+    height: 250vw;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    z-index: -1;
+}
+.card{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 2em;
+    transform-style: preserve-3d;
+    will-change: transform;
+    overflow: hidden;
 }
