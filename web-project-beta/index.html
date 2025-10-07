@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="intro.css">
     <link rel="stylesheet" href="h-scroll.css">
+    <link rel="stylesheet" href="outro.css">
 
 </head>
 <body>
@@ -33,9 +34,9 @@
 
 
     <section id="intro">
-        <h1 id="welcome">About Me</h1>
+        <h1 id="welcome">ABOUT ME</h1>
             <div class="intro-flex">
-                <img id="profile-pic" src="project-files/selfiecropped.jpg" alt="Picture of Jacob Martinez">
+                <img class="profile-pic" src="project-files/selfiecropped.jpg" alt="Picture of Jacob Martinez">
                 <p id="intro-text">
                     I am <span class="my-name">Jacob Martinez </span>, a junior at UNLV pursuing a degree in Information Systems with a strong passion
                     for coding and software development. My academic work and projects have given me hands on experience
@@ -50,45 +51,42 @@
 <section class="hero h-section">
     <h1 class="h-h1" >My Projects</h1>
 </section>
-    <section id="h-section" class="sticky">
-        <div class="titles">
-
-            <div class="title">
-                <a href="portfolio.html">
-                <h1 class="title-1 h-h1">Portfolio Project</h1>
-                <h1 class="title-2 h-h1">Portfolio Project</h1>
-                <h1 class="title-3 h-h1">Portfolio Project</h1>
-                </a>
-            </div>
-            <div class="title">
-                <a href="class-projects.html">
-                <h1 class="title-1 h-h1">Class Projects</h1>
-                <h1 class="title-2 h-h1">Class Projects</h1>
-                <h1 class="title-3 h-h1">Class Projects</h1>
-                </a>
-            </div>
-            <div class="title">
-                <a href="controller.html">
-                    <h1 class="title-1 h-h1">Controller Mods</h1>
-                    <h1 class="title-2 h-h1">Controller Mods</h1>
-                    <h1 class="title-3 h-h1">Controller Mods</h1>
-                </a>
-            </div>
-
-<!--                These are for future projects as they come along-->
-<!--            <div class="title">-->
-<!--                <h1 class="title-1 h-h1">Showcase Hub</h1>-->
-<!--                <h1 class="title-2 h-h1">Showcase Hub</h1>-->
-<!--                <h1 class="title-3 h-h1">Showcase Hub</h1>-->
-<!--            </div>-->
-<!--            <div class="title">-->
-<!--                <h1 class="title-1 h-h1">My Projects</h1>-->
-<!--                <h1 class="title-2 h-h1">My Projects</h1>-->
-<!--                <h1 class="title-3 h-h1">My Projects</h1>-->
-<!--            </div>-->
+<section class="sticky">
+    <div class="titles">
+        <div class="title">
+            <h1 class="title-1 h-h1">Jacob Martinez</h1>
+            <h1 class="title-2 h-h1">Jacob Martinez</h1>
+            <h1 class="title-3 h-h1">Jacob Martinez</h1>
         </div>
-        <div class="images"></div>
-    </section>
+        <div class="title">
+            <a href="portfolio.html">
+            <h1 class="title-1 h-h1">Portfolio Project</h1>
+            <h1 class="title-2 h-h1">Portfolio Project</h1>
+            <h1 class="title-3 h-h1">Portfolio Project</h1>
+            </a>
+        </div>
+        <div class="title">
+            <a href="class-projects.html">
+            <h1 class="title-1 h-h1">Class Projects</h1>
+            <h1 class="title-2 h-h1">Class Projects</h1>
+            <h1 class="title-3 h-h1">Class Projects</h1>
+            </a>
+        </div>
+        <div class="title">
+            <a href="controller.html">
+                <h1 class="title-1 h-h1">Controller Mods</h1>
+                <h1 class="title-2 h-h1">Controller Mods</h1>
+                <h1 class="title-3 h-h1">Controller Mods</h1>
+            </a>
+        </div>
+        <div class="title">
+            <h1 class="title-1 h-h1">Computer Builds</h1>
+            <h1 class="title-2 h-h1">Computer Builds</h1>
+            <h1 class="title-3 h-h1">Computer Builds</h1>
+        </div>
+    </div>
+    <div class="images"></div>
+</section>
 <section class="outro">
     <h1 class="fh-h1">(I got Aura)</h1>
 </section>
@@ -99,16 +97,24 @@
     <!--
         gibberish for now
     -->
-  <section class="contact-me">
+  <section class="contact-me-section">
       <div class="contact-me-container">
+        <h1 class="contact-me-h">
+            CONTACT ME
+        </h1>
+          <img class="second-profile-pic" src="project-files/selfie2.JPG">
+          <div class="contact-info">
+              <p class="quote">Let's Get in Touch</p>
+              <p class="email"> xxjacobmartinezxx@gmail.com</p>
 
+          </div>
       </div>
   </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
 <script src="main.js"></script>
 <script src="hScroll.js"></script>
-
+<script src="outro.js"></script>
 </body>
 </html>

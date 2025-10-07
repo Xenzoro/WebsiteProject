@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+}
+.contact-me-container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.contact-me-h{
+    display: flex;
+    font-size: 5em;
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+}
+.second-profile-pic{
+    border-radius: 25%;
+    width: 20em;
+    height: 20em;
+}
+.quote{
+    color: white;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    /*top: -180px;*/
+    /*left: 75px;*/
+    z-index: 1;
+    border-radius: 3px;
+    padding: 5px;
+    width: 30%;
+    text-align: center;
+    background-color: #269cd4;
+
+
+    /*this sets transition for GSAP Animation AKA hides to left */
+    /*transform: translateX(-150px);*/
+    /*transition: none; !* GSAP handles transitions *!*/
+}

@@ -20,26 +20,29 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     const titlesContainer = document.querySelector(".titles");
+    // change this next element based on how many titles i add
     const moveDistance = window.innerWidth * 3;
 
     const imagesContainer = document.querySelector(".images");
-    for (let i = 1; i <= 10; i++) {
+    const imageCount = 11; // this number will or can change depending on what images i add
+
+    for (let i = 1; i <= imageCount; i++) {
         const card = document.createElement("div");
         card.className = `card card-${i}`;
 
         const img = document.createElement("img");
-        img.src = `project-files/hScroll/img${i}.jpeg`;
+        img.src = `project-files/hScroll/img (${i}).jpeg`;
         img.alt = `Image ${i}`;
         card.appendChild(img);
 
-        const position = cardPositions[i - 1];
+        const position = cardPositions[(i - 1) % cardPositions.length]; // this lets us reuse positions
         card.style.top = position.top;
         card.style.left = position.left;
 
         imagesContainer.appendChild(card);
     }
 
-    const cards = document.querySelectorAll(".card");
+    const cards = imagesContainer.querySelectorAll(".card");
     cards.forEach((card, index) => {
         gsap.set(card, {
             z: -50000,

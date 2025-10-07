@@ -47,12 +47,14 @@ body{
     align-items: center;
     gap: 2rem;
 }
-#profile-pic{
-    margin-left:50px;
+.profile-pic{
+    margin-left:25px;
+    margin-right: 7px;
+    align-items: center;
     display: flex;
     border:10px solid rgba(38, 156, 212, 0.85);
     height:auto;
-    width:30%;
+    width:50%;
     border-radius: 50%;
 }
 #intro-text{
