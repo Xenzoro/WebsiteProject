@@ -1,19 +1,60 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Debug: Add a simple GSAP animation to test if GSAP works
-// This should move the quote immediately on page load
-// Remove or comment out after testing
-// gsap.to(".quote", { x: 150, duration: 1 });
-
-// Add markers for ScrollTrigger debugging
-// This will show start/end points on the page
-
-gsap.to(".quote", {
-    x: 150, // Move 150px to the right
+gsap.to(".contact-info", {
+    x: 350,
+    y: 150,
+    duration: 1,
+    scale: 1.5,
     scrollTrigger: {
         trigger: ".contact-info",
-        start: "top center", //starts when section enters viewport
-        scrub: true, // Animation tied to scroll position
-        markers: false // Show markers for debugging
+        start: "top 100%",
+        end: "bottom 80%",
+        scrub: true,
+        // markers: true,
+        toggleActions: "restart none none pause"
     }
+});
+
+gsap.to(".second-profile-pic",{
+    x: -140,
+    duration: 1,
+    scale: 1.3,
+    scrollTrigger: {
+        trigger: ".second-profile-pic",
+        start: "top 100%",
+        end: "bottom 80%",
+        scrub: true,
+        // markers: true,
+        toggleActions: "restart none none pause"
+    }
+});
+
+gsap.to(" .contact-me-h",{
+   x: -25,
+   y: -75,
+   duration: 1,
+   scale: 1.2,
+    scrollTrigger: {
+        trigger: ".contact-me-h",
+        start: "top 100%",
+        end: "bottom 80%",
+        scrub: true,
+        // markers: true,
+        toggleActions: "restart none none pause"
+    }
+});
+
+gsap.to(" .email-address",{
+    x: -20,
+    y: 130,
+    duration: 1,
+    scale: 1.2,
+     scrollTrigger: {
+         trigger: ".email-address",
+         start: "top 100%",
+         end: "bottom 80%",
+         scrub: true,
+         // markers: true,
+         toggleActions: "restart none none pause"
+     }
 });

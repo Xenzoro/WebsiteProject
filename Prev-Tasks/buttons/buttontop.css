@@ -49,7 +49,7 @@ body{
     position: relative;
     width: 150px;
     height: 50px;
-    background: #0096ff;
+    background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
     border: 1px solid #0096ff;
     border-radius: 8px;
     /*overflow: hidden;*/
@@ -113,4 +113,3 @@ body{
     background: transparent;
     /* ...existing styles... */
 }
-

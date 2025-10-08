@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const titlesContainer = document.querySelector(".h-scroll-titles");
     // change this next element based on how many titles i add
-    const moveDistance = window.innerWidth * 3;
+    const moveDistance = window.innerWidth * 4;
 
     const imagesContainer = document.querySelector(".h-scroll-images");
     const imageCount = 11; // this number will or can change depending on what images i add
@@ -49,13 +49,56 @@ document.addEventListener("DOMContentLoaded", () => {
             scale: 0,
         });
     });
-
+//
+//     gsap.to(".h-scroll-section::after", {
+//         opacity: 0,
+//         scrollTrigger: {
+//             trigger: ".h-scroll-section",
+//             start: "top top",
+//             end: "bottom top",
+//             scrub: true
+//         }
+//     });
+//     gsap.to(".h-scroll-blur", {
+//         opacity: 0,
+//         scrollTrigger: {
+//             trigger: ".h-scroll-section",
+//             start: "top top",
+//             end: "bottom top",
+//             scrub: true
+//         }
+//     });
+//     // Fade blur out as you scroll in
+//     gsap.to(".h-scroll-blur", {
+//         opacity: 0,
+//         scrollTrigger: {
+//             trigger: ".h-scroll-section",
+//             start: "top top",
+//             end: "bottom top",
+//             scrub: true
+//         }
+//     });
+//
+// // Fade blur back in as you scroll past
+//     gsap.to(".h-scroll-blur", {
+//         opacity: 1,
+//         scrollTrigger: {
+//             trigger: ".h-scroll-section",
+//             start: "bottom top",
+//             end: "+=200", // adjust distance as needed
+//             scrub: true
+//         }
+//     });
+    // SUPER IMPORTANT DONT FORGET THIS LINE IF YOU WANT IT TO WORK
+    document.querySelector('.h-scroll-spacer').style.height = `${window.innerHeight * 4}px`;
     ScrollTrigger.create({
         trigger: ".h-scroll-section",
         start: "top top",
-        end: `+=${window.innerHeight * 5}px`,
+        // end: `+=${window.innerHeight * 5}px`,
+        end: `+=${window.innerHeight * 4}px`, // Reduce pin duration
         pin: true,
         scrub: 1,
+        pinSpacing: false, // or false if you want no extra space
         onUpdate: (self) => {
             const xPosition = -moveDistance * self.progress;
             gsap.set(titlesContainer, {

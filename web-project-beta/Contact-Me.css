@@ -6,16 +6,41 @@
 body{
 
 }
+.contact-me-section{
+    background-color: #333333;
+    z-index: 0;
+}
 .contact-me-container{
+    align-items: center;
     position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 50px;
-    margin-right: 50px;
+    background-color: #333333;
 
+    /*margin-left: 50px;*/
+    /*margin-right: 50px;*/
+
+}
+.contact-box {
+    background-color: #269cd4;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    padding-top: 150px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    max-height: 60vh;
+    background-image: linear-gradient(to bottom right,#269cd4,#06344e);
+    border: black solid 1px;
+
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
 }
 .contact-me-h{
     display: flex;
@@ -29,24 +54,70 @@ body{
     border-radius: 25%;
     width: 20em;
     height: 20em;
+    position: relative;
+    border: 2px solid black;
+    /*border-image: linear-gradient(to bottom right,#333333, #1c1c1c);*/
+    /*border-image-slice: 1;*/
+    z-index: 100;
+    /*left: -50px;*/
+/*    i want my profile pic to load in from the center and shift towards the right, opposite of the Quote*/
 }
+.contact-info {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     z-index: 0;
+ }
 .quote{
+    font-size: 3em;
     color: white;
     display: flex;
     position: relative;
     flex-direction: row;
-    /*top: -180px;*/
-    /*left: 75px;*/
-    z-index: 1;
-    border-radius: 3px;
-    padding: 5px;
-    width: 30%;
+    top: -250px;
+    left: -70px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: auto;
+    max-width: 220px;
     text-align: center;
-    background-color: #269cd4;
+    background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
 
-
-    /*this sets transition for GSAP Animation AKA hides to left */
-    /*transform: translateX(-150px);*/
-    /*transition: none; !* GSAP handles transitions *!*/
 }
 
+.email-address{
+
+    font-size: 1.5em;
+    color: white;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: auto;
+    text-align: center;
+    background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
+    top: -200px;
+    left: -70px;
+    z-index: 0;
+    scale: 0.1;
+
+}
+.contact-me-h{
+
+    margin: 0 auto;
+    width: auto;
+    padding: 5px 15px;
+    font-size: 4em;
+    color: white;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    border-radius: 20px;
+    ;
+    text-align: center;
+    background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
+}
+.email{
+ text-align: center;}
