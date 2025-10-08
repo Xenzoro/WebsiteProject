@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     /*font-family: '', sans-serif;*/
 }
@@ -11,7 +12,14 @@ img{
     height: 100%;
     object-fit: cover;
 }
-section{
+.hero{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.h-scroll-section, .outro {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -49,14 +57,17 @@ nav p span {
 
 .hero, .outro {
     display: flex;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
     background-color: #edebde;
+
+
 }
 .sticky{
     background-color: #282828;
 }
-.titles{
+.h-scroll-titles{
     position: absolute;
     top: 0%;
     left: 0%;
@@ -65,7 +76,7 @@ nav p span {
     display: flex;
     will-change: transform;
 }
-.title{
+.h-scroll-title{
     position: relative;
     flex: 0 0 100vw;
     min-width: 100vw;
@@ -75,7 +86,7 @@ nav p span {
     align-items: center;
     height: 100vh;
 }
-.title h1{
+.h-scroll-title h1{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -93,7 +104,7 @@ h1.title-2{
 h1.title-3{
     color: black;
 }
-.images{
+.h-scroll-images{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -104,7 +115,7 @@ h1.title-3{
     perspective: 2000px;
     z-index: -1;
 }
-.card{
+.h-scroll-images .h-scroll-card{
     position: absolute;
     width: 15%;
     height: 15%;

@@ -19,16 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
         { top: "45%", left: "55%" },
     ];
 
-    const titlesContainer = document.querySelector(".titles");
+    const titlesContainer = document.querySelector(".h-scroll-titles");
     // change this next element based on how many titles i add
     const moveDistance = window.innerWidth * 3;
 
-    const imagesContainer = document.querySelector(".images");
+    const imagesContainer = document.querySelector(".h-scroll-images");
     const imageCount = 11; // this number will or can change depending on what images i add
 
     for (let i = 1; i <= imageCount; i++) {
         const card = document.createElement("div");
-        card.className = `card card-${i}`;
+        card.className = `h-scroll-card h-scroll-card-${i}`;
 
         const img = document.createElement("img");
         img.src = `project-files/hScroll/img (${i}).jpeg`;
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         imagesContainer.appendChild(card);
     }
 
-    const cards = imagesContainer.querySelectorAll(".card");
+    const cards = imagesContainer.querySelectorAll(".h-scroll-card");
     cards.forEach((card, index) => {
         gsap.set(card, {
             z: -50000,
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     ScrollTrigger.create({
-        trigger: ".sticky",
+        trigger: ".h-scroll-section",
         start: "top top",
         end: `+=${window.innerHeight * 5}px`,
         pin: true,
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const isAtEdge = self.progress <= 0 || self.progress >= 1;
 
-            document.querySelectorAll(".title").forEach((titleContainer, index) => {
+            document.querySelectorAll(".h-scroll-title").forEach((titleContainer, index) => {
                 const title1 = titleContainer.querySelector(".title-1");
                 const title2 = titleContainer.querySelector(".title-2");
                 const title3 = titleContainer.querySelector(".title-3");

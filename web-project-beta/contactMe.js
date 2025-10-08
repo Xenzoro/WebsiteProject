@@ -12,8 +12,8 @@ gsap.to(".quote", {
     x: 150, // Move 150px to the right
     scrollTrigger: {
         trigger: ".contact-info",
-        start: "top 80%", //starts when section enters viewport
+        start: "top center", //starts when section enters viewport
         scrub: true, // Animation tied to scroll position
-        markers: true // Show markers for debugging
+        markers: false // Show markers for debugging
     }
 });
