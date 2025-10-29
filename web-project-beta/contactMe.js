@@ -1,7 +1,9 @@
 gsap.registerPlugin(ScrollTrigger);
 
+
+//this file controls animations for contactMe files. or my contact me section on the bottom of my page.
 gsap.to(".contact-info", {
-    x: 350,
+    x: 360,
     y: 150,
     duration: 1,
     scale: 1.5,

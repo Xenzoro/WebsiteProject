@@ -47,7 +47,7 @@ img{
 .h-scroll-section, .outro {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     overflow: hidden;
 }
 
@@ -74,11 +74,13 @@ nav p span {
     color: grey;
 }
 .h-h1{
-    display: flex;
+    display: block;
     text-transform: uppercase;
     font-size: 11vw;
     font-weight: 500;
     color: black;
+    text-align: center;
+    line-height: 1.05;
 }
 
 .hero, .outro {
@@ -88,20 +90,22 @@ nav p span {
     align-items: center;
     background-color: #333333;
     font-size: 7vw;
+    opacity: 100%;
 
 
 }
 .sticky{
-    background-image: linear-gradient(to bottom right,#000000,#06344e, #269cd4, #333333);
-    border-bottom: #000000 solid 10px;
-    border-top: #000000 solid 10px;
+    /*I thought this was cool but it looks a bit dated.*/
+    /*background-image: linear-gradient(to bottom right,#000000,#06344e, #269cd4, #333333);*/
+    /*border-bottom: #000000 solid 10px;*/
+    /*border-top: #000000 solid 10px;*/
 }
 .h-scroll-titles{
     position: absolute;
     top: 0%;
     left: 0%;
     width: 400vw;
-    height: 100vh;
+    height: 20vh;
     display: flex;
     will-change: transform;
 }
@@ -152,6 +156,18 @@ h1.title-3{
     transform-style: preserve-3d;
     will-change: transform;
     overflow: hidden;
+}
+
+.blue-always{
+    background-image: linear-gradient(to bottom right,#06344e, #269cd4, #333333);
+    /*webkit-only: restricts the backtround to the text glyphs so the gradient shows through letters
+     background-clip:text -> non-prefixed attempt to clip background to text (limited broswer support)
+     -webkit-text-fill-color transparent -> webkit-only: makes the text fill transparent so the clipped background becomes visible*/
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    opacity: 80%;
 }
 /*.h-scroll-spacer{*/
 /*width: 100vw;*/
