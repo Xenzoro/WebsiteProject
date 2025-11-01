@@ -88,7 +88,7 @@ nav p span {
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    background-color: #333333;
+    background-color: rgba(38, 156, 212, 0.85);
     font-size: 7vw;
     opacity: 100%;
 
@@ -132,7 +132,7 @@ h1.title-1{
     color: #269cd4;
 }
 h1.title-2{
-    color: #3f3f3f;
+    color: #333333;
 }
 h1.title-3{
     color: black;
@@ -159,7 +159,7 @@ h1.title-3{
 }
 
 .blue-always{
-    background-image: linear-gradient(to bottom right,#06344e, #269cd4, #333333);
+    background-image: linear-gradient(to bottom right, #393939, #1b1b1b, #1b1b1b);
     /*webkit-only: restricts the backtround to the text glyphs so the gradient shows through letters
      background-clip:text -> non-prefixed attempt to clip background to text (limited broswer support)
      -webkit-text-fill-color transparent -> webkit-only: makes the text fill transparent so the clipped background becomes visible*/

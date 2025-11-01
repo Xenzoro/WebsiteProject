@@ -7,7 +7,7 @@ body{
 
 }
 .contact-me-section{
-    background-color: #333333;
+    background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
     z-index: 0;
 }
 .contact-me-container{
@@ -18,7 +18,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #333333;
+    background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
 
     /*margin-left: 50px;*/
     /*margin-right: 50px;*/
@@ -37,7 +37,7 @@ body{
     justify-content: center;
     min-height: 60vh;
     max-height: 60vh;
-    background-image: linear-gradient(to bottom right,#269cd4,#06344e);
+    background-color: rgba(38, 156, 212, 0.85);
     border: black solid 1px;
 
     box-shadow: 0 4px 24px rgba(0,0,0,0.12);
@@ -104,6 +104,7 @@ body{
     scale: 0.1;
 
 }
+
 .contact-me-h{
 
     margin: 0 auto;
@@ -120,4 +121,15 @@ body{
     background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
 }
 .email{
- text-align: center;}
+    text-align: center;
+
+}
+
+.email-link{
+    color: white;
+    text-decoration: none;
+    }
+
+.contact-form{
+    text-decoration: none;
+}

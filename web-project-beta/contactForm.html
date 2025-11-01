@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lets Talk!</title>
+</head>
+<link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="intro.css">
+<link rel="stylesheet" href="h-scroll.css">
+<link rel="stylesheet" href="Contact-Me.css">
+<link rel="stylesheet" href="contactForm.css">
+
+<body>
+
+<nav id="navbar">
+    <div class="liquid-container">
+        <a href="index.html" class="liquid-element-rr"><span>Home</span></a>
+        <a href="project.html" class="liquid-element-rl"><span>Projects</span></a>
+        <a href="aboutme.html" class="liquid-element-rr"><span>About Me</span></a>
+        <a href="contactForm.html" class="liquid-cont-element-rl"><span>Contact Me</span></a>
+    </div>
+</nav>
+    <div id="hamburger-container">
+        <button id="hamburger" aria-label="open menu" class="hamburger-element" >
+            &#9776;
+        </button>
+    </div>
+        <nav id="mobile-navbar" class="hidden-navbar" >
+            <div class="liquid-container-mobile">
+                <a href="index.html" class="liquid-element-rr"><span>Home</span></a>
+                <a href="project.html" class="liquid-element-rl"><span>Projects</span></a>
+                <a href="aboutme.html" class="liquid-element-rr"><span>About Me</span></a>
+                <a href="contactForm.html" class="liquid-cont-element-rl"><span>Contact Me</span></a>
+            </div>
+        </nav>
+
+
+<div class="social-links-container">
+
+<div class="social-links">
+    <a href="https://www.linkedin.com/in/jacobmartinii/" target="_blank" class="linkedinButton">LinkedIn</a>
+    <a href="https://github.com/Xenzoro" target="_blank" class="githubButton">GitHub</a>
+    <a href="#contact-location" class="emailButton">Email </a>
+
+</div>
+    <hr class="divider">
+</div>
+    <div class="contact-form-container" id="contact-location">
+
+        <form action="https://api.web3forms.com/submit" method="Post" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get In Touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="cbf0ecd1-94d3-4c33-87b1-53b705cf5316">
+            <input type="text" name="Name" placeholder="Your Name" required class="contact-inputs">
+            <input type="email" name="Email" placeholder="Your Email" required class="contact-inputs">
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit </button>
+        </form>
+    <div class="contact-right">
+        <img src="project-files/contact-form-assets/maeNJakeMary.png" alt="TBH">
+    </div>
+    </div>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+<script src="hScroll.js"></script>
+<script src="contactMe.js"></script>
+</body>
+</html>
