@@ -110,3 +110,17 @@ body{
 /*    margin-bottom: 20px;*/
 
 /*}*/
+
+@media screen and (max-width: 800px){
+    #intro-text{
+        font-size: 4vw;
+    }
+    .my-name{
+        font-size: 5vw;
+    }
+    .profile-pic{
+        align-items : center;
+        margin: 0;
+        width: 75%;
+    }
+}
