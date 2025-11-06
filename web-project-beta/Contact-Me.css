@@ -51,7 +51,7 @@ body{
     flex-direction: column;
 }
 .second-profile-pic{
-    border-radius: 25%;
+    border-radius: 25px;
     width: 20em;
     height: 20em;
     position: relative;

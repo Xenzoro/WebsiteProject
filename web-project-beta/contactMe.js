@@ -86,8 +86,8 @@ gsap.to(" .email-address",{
         {
             paused: true,
             scale: (1.6),
-            x: 370,
-            y: 210
+            x: 380,
+            y: 200
 
         });
     getInTouch.addEventListener("mouseenter",
@@ -110,6 +110,5 @@ gsap.to(" .email-address",{
     () => animation3.play())
     ProfilePic2.addEventListener("mouseleave",
     () => animation3.reverse());
-
     })();
 
