@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 //this file controls animations for contactMe files. or my contact me section on the bottom of my page.
 gsap.to(".contact-info", {
-    x: 380,
+    x: 365,
     y: 200,
     duration: 1,
     scale: 1.5,
@@ -86,8 +86,8 @@ gsap.to(" .email-address",{
         {
             paused: true,
             scale: (1.6),
-            x: 380,
-            y: 200
+            x: 374,
+            y: 227
 
         });
     getInTouch.addEventListener("mouseenter",

@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.className = `h-scroll-card h-scroll-card-${i}`;
 
         const img = document.createElement("img");
-        img.src = `project-files/hScroll/img (${i}).jpeg`;
+        img.src = `../project-files/horizontal-project-scroll-assets/img (${i}).jpeg`;
         img.alt = `Image ${i}`;
         card.appendChild(img);
 

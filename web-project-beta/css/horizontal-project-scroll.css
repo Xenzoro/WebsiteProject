@@ -15,7 +15,7 @@ img{
 .hero{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     overflow: hidden;
 }
 
@@ -76,7 +76,9 @@ nav p span {
 .h-h1{
     display: block;
     text-transform: uppercase;
-    font-size: 11vw;
+    font-size: 10rem;
+    /*padding-top: 2rem;*/
+    /*padding-bottom: 2rem;*/
     font-weight: 500;
     color: black;
     text-align: center;
@@ -89,7 +91,7 @@ nav p span {
     justify-content: center;
     align-items: center;
     background-color: rgba(38, 156, 212, 0.85);
-    font-size: 7vw;
+    font-size: 10rem;
     opacity: 100%;
 
 

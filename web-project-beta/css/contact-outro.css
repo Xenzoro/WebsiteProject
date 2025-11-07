@@ -9,37 +9,44 @@ body{
 .contact-me-section{
     background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
     z-index: 0;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 110vh;
 }
 .contact-me-container{
     align-items: center;
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100dvh;
+    /*height: 100vh;*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
+    justify-content: end;
+    /*background-image: linear-gradient(to bottom right,#333333, #1c1c1c);*/
 
     /*margin-left: 50px;*/
     /*margin-right: 50px;*/
 
 }
 .contact-box {
+    position: absolute;
+
     background-color: #269cd4;
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
-    margin: auto;
-    padding-top: 150px;
+    /*margin: 0 auto;*/
+    /*padding-top: 150px 2rem 80px;*/
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
-    max-height: 60vh;
+    min-height: 80vh;
+    /*max-height: 60vh;*/
     background-color: rgba(38, 156, 212, 0.85);
-    border: black solid 1px;
-
+    /*border: black solid 1px;*/
     box-shadow: 0 4px 24px rgba(0,0,0,0.12);
 }
 .contact-me-h{
@@ -48,7 +55,11 @@ body{
 }
 .contact-info{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 0;
 }
 .second-profile-pic{
     border-radius: 25px;
@@ -56,6 +67,9 @@ body{
     height: 20em;
     position: relative;
     border: 2px solid black;
+    left: -1rem;
+    top: 4rem;
+
     /*border-image: linear-gradient(to bottom right,#333333, #1c1c1c);*/
     /*border-image-slice: 1;*/
     z-index: 100;
@@ -68,6 +82,8 @@ body{
      align-items: center;
      justify-content: center;
      z-index: 0;
+     position: relative;
+     left: -2rem;
 
  }
 .quote{
@@ -76,8 +92,8 @@ body{
     display: flex;
     position: relative;
     flex-direction: row;
-    top: -250px;
-    left: -70px;
+    top: -15rem;
+    left: -3rem;
     border-radius: 20px;
     padding: 5px 15px;
     width: auto;
@@ -99,8 +115,8 @@ body{
     width: auto;
     text-align: center;
     background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
-    top: -200px;
-    left: -70px;
+    top: -8rem;
+    /*left: -8rem;*/
     z-index: 0;
     scale: 0.1;
 
@@ -117,7 +133,9 @@ body{
     position: relative;
     flex-direction: row;
     border-radius: 20px;
-    ;
+    top: 3rem;
+    left: auto;
+    right: auto;
     text-align: center;
     background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
 }
