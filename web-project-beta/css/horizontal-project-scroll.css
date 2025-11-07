@@ -74,15 +74,29 @@ nav p span {
     color: grey;
 }
 .h-h1{
-    display: block;
+    display: flex;
+    flex-direction : column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
     text-transform: uppercase;
-    font-size: 10rem;
+    font-size: 9rem;
+    /*margin-right: 3rem;*/
     /*padding-top: 2rem;*/
     /*padding-bottom: 2rem;*/
     font-weight: 500;
     color: black;
     text-align: center;
     line-height: 1.05;
+    margin: 2rem;
+}
+.h-h1 .line{
+    display: block;
+    width: 100%;
+}
+.h-h1 .spacer{
+    height: 1.6rem;
+    width: 100%;
 }
 
 .hero, .outro {
@@ -93,6 +107,8 @@ nav p span {
     background-color: rgba(38, 156, 212, 0.85);
     font-size: 10rem;
     opacity: 100%;
+    /*margin-left : 1rem;*/
+    /*margin-right: 1rem;*/
 
 
 }
@@ -171,8 +187,15 @@ h1.title-3{
     color: transparent;
     opacity: 80%;
 }
+
 /*.h-scroll-spacer{*/
 /*width: 100vw;*/
 /*height: 100vh;*/
 
 /*}*/
+
+@media screen and (max-width: 900px){
+    .h-h1{
+        font-size: 6.5rem;
+        line-height: 1.05;
+    }
