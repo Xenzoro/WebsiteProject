@@ -31,7 +31,7 @@ body{
 .profile-pic{
     justify-self: center;
     border-radius: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     width: 80vw;
 
     padding-right: 2rem;
@@ -44,5 +44,7 @@ body{
 }
 .txt-content{
     /*display: flex;*/
-    font-size: 1.8rem;
+    font-size: 1rem;
+    font-weight: 100;
+    /*text-transform: uppercase;*/
 }

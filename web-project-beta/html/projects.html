@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Projects!</title>
+</head>
+<link rel="stylesheet" href="../css/projects.css">
+<link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="../css/horizontal-project-scroll.css">
+<body>
+
+<nav id="navbar">
+    <div class="liquid-container">
+        <!--        this logo class is WIP-->
+        <div class="logo-container">
+            <img alt="logo" class="logo" src="../project-files/dark-logo.png"></img>
+        </div>
+        <a href="index.html" class="liquid-element-rr"><span>Home</span></a>
+        <a href="projects.html" class="liquid-element-rl"><span>Projects</span></a>
+        <a href="about-me.html" class="liquid-element-rr"><span>About Me</span></a>
+        <a href="contactForm.html" class="liquid-cont-element-rl"><span>Contact Me</span></a>
+    </div>
+</nav>
+<div id="hamburger-container">
+    <button id="hamburger" aria-label="open menu" class="hamburger-element" >
+        &#9776;
+    </button>
+</div>
+<nav id="mobile-navbar" class="hidden-navbar" >
+    <div class="liquid-container-mobile">
+        <a href="index.html" class="liquid-element-rr"><span>Home</span></a>
+        <a href="computer-project.html" class="liquid-element-rl"><span>Projects</span></a>
+        <a href="about-me.html" class="liquid-element-rr"><span>About Me</span></a>
+        <a href="contactForm.html" class="liquid-cont-element-rl"><span>Contact Me</span></a>
+    </div>
+</nav>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="../js/navbar.js"></script>
+<script src="../js/horizontal-project-scroll.js"></script>
+</html>
