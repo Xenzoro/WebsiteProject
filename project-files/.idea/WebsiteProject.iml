@@ -12,5 +12,7 @@
     <orderEntry type="library" name="lenis" level="application" />
     <orderEntry type="library" name="gsap" level="application" />
     <orderEntry type="library" name="lenis" level="application" />
+    <orderEntry type="library" name="gsap" level="application" />
+    <orderEntry type="library" name="lenis" level="application" />
   </component>
 </module>
