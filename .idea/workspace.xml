@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Refactor navbar.js and add project configuration files: rename navbar.js for clarity and introduce modules.xml and workspace.xml for project management">
-      <change beforePath="$PROJECT_DIR$/project-files/css/horizontal-project-scroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/css/horizontal-project-scroll.css" afterDir="false" />
+    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Refactor horizontal project scroll functionality: update image paths for consistency, enhance CSS styles, and improve code readability">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-files/css/contact-outro.css" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/css/contact-outro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-files/js/contact-outro.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/js/contact-outro.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +82,7 @@
       <workItem from="1769627105874" duration="3172000" />
       <workItem from="1769659310433" duration="599000" />
       <workItem from="1769663664609" duration="595000" />
-      <workItem from="1769736302723" duration="1809000" />
+      <workItem from="1769736302723" duration="2722000" />
     </task>
     <task id="LOCAL-00001" summary="Rename and reorganize project files: update paths for HTML, CSS, and JS files for improved structure and accessibility">
       <option name="closed" value="true" />
@@ -106,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769744205237</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactor horizontal project scroll functionality: update image paths for consistency, enhance CSS styles, and improve code readability">
+      <option name="closed" value="true" />
+      <created>1769744867358</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769744867358</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +125,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Rename and reorganize project files: update paths for HTML, CSS, and JS files for improved structure and accessibility" />
     <MESSAGE value="Refactor navbar.js and add project configuration files: rename navbar.js for clarity and introduce modules.xml and workspace.xml for project management" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor navbar.js and add project configuration files: rename navbar.js for clarity and introduce modules.xml and workspace.xml for project management" />
+    <MESSAGE value="Refactor horizontal project scroll: update CSS positioning and improve image source handling for better compatibility" />
+    <MESSAGE value="Refactor horizontal project scroll functionality: update image paths for consistency, enhance CSS styles, and improve code readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor horizontal project scroll functionality: update image paths for consistency, enhance CSS styles, and improve code readability" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

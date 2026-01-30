@@ -69,7 +69,7 @@ gsap.to(" .email-address",{
         let animation = gsap.to(".email-address",
         {
             paused: true,
-            scale: (1.3)
+            scale: "+=0.1"
 
         });
     // this detects if there is a mouse on that element, if there is it plays the animation, if not it reverses it.
@@ -85,9 +85,9 @@ gsap.to(" .email-address",{
     let animation2 = gsap.to(".contact-info",
         {
             paused: true,
-            scale: (1.6),
-            x: 374,
-            y: 227
+            scale: "+=0.1",
+            x: "+=9",
+            y: "+=27"
 
         });
     getInTouch.addEventListener("mouseenter",
@@ -102,8 +102,8 @@ gsap.to(" .email-address",{
     let animation3 = gsap.to(".second-profile-pic",
         {
             paused: true,
-            scale: (1.4),
-            x: -150
+            scale: "+=0.1",
+            x: "-=10"
 
         });
     ProfilePic2.addEventListener("mouseenter",
