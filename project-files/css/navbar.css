@@ -89,6 +89,19 @@ body{
     font-size: 1rem;
     margin: 0;
     padding: 0;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.liquid-element-rr:focus,
+.liquid-element-rl:focus,
+.liquid-cont-element-rl:focus {
+    outline: none;
+    border: none;
 }
 
 .liquid-element-rr span,
@@ -172,6 +185,21 @@ font-size: 3.5rem;
 border-radius: 12px;
 padding: 18px 28px;
 cursor: pointer;
+outline: none;
+-webkit-tap-highlight-color: transparent;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+user-select: none;
+}
+
+#hamburger:focus {
+    outline: none;
+    border: none;
+}
+
+#hamburger:active {
+    outline: none;
+    border: none;
 }
 
 .hamburg-container {
