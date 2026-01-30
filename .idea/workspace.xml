@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Update navbar behavior for mobile responsiveness: ensure desktop navbar remains hidden on mobile and improve visibility management" />
+    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Add favicon link to multiple HTML files for improved branding">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-files/html/about-me.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/html/about-me.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-files/html/class-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/html/class-projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-files/html/computer-project.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/html/computer-project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-files/html/contactForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/html/contactForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-files/html/controller-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/html/controller-projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-files/html/portfolio-project.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/html/portfolio-project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-files/html/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/html/projects.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +88,7 @@
       <workItem from="1769627105874" duration="3172000" />
       <workItem from="1769659310433" duration="599000" />
       <workItem from="1769663664609" duration="595000" />
-      <workItem from="1769736302723" duration="4994000" />
+      <workItem from="1769736302723" duration="5973000" />
     </task>
     <task id="LOCAL-00001" summary="Rename and reorganize project files: update paths for HTML, CSS, and JS files for improved structure and accessibility">
       <option name="closed" value="true" />
@@ -176,7 +186,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769749354355</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update navbar behavior for mobile responsiveness: ensure desktop navbar remains hidden on mobile and improve visibility management">
+      <option name="closed" value="true" />
+      <created>1769749640964</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1769749640964</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update navbar behavior for mobile responsiveness: adjust breakpoint to 1200px for improved visibility management">
+      <option name="closed" value="true" />
+      <created>1769749730326</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1769749730326</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +220,9 @@
     <MESSAGE value="Update navbar styles for improved mobile responsiveness: enhance hamburger menu size and button dimensions for better usability on small screens" />
     <MESSAGE value="Update navbar styles for improved accessibility: remove outlines and borders on focus and active states for better user experience" />
     <MESSAGE value="Update navbar behavior for mobile responsiveness: ensure desktop navbar remains hidden on mobile and improve visibility management" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update navbar behavior for mobile responsiveness: ensure desktop navbar remains hidden on mobile and improve visibility management" />
+    <MESSAGE value="Update navbar behavior for mobile responsiveness: adjust breakpoint to 1200px for improved visibility management" />
+    <MESSAGE value="Add favicon link to multiple HTML files for improved branding" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add favicon link to multiple HTML files for improved branding" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
