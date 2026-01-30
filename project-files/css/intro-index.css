@@ -1,5 +1,5 @@
 @font-face{
-    src:url(../project-files/archivo.ttf);
+    src:url(../archivo.ttf);
     font-family:archivo;
 }
 *{box-sizing:border-box;}

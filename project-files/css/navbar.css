@@ -1,5 +1,5 @@
 @font-face{
-    src:url(../project-files/archivo.ttf);
+    src:url(../archivo.ttf);
     font-family:archivo;
 }
 *{box-sizing:border-box;}
@@ -86,7 +86,7 @@ body{
     text-decoration: none;
     color: #fff;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0;
     padding: 0;
 }
@@ -95,7 +95,7 @@ body{
 .liquid-element-rl span,
 .liquid-cont-element-rl span {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     position: relative;
     z-index: 2;
     pointer-events: none;
@@ -115,7 +115,7 @@ body{
     text-decoration: none;
     color: #fff;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0;
     padding: 0;
 
