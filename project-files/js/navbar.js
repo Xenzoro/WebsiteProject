@@ -5,16 +5,26 @@ const THRESHOLD = 8;
 const hamburger = document.getElementById("hamburger");
 const mobileNavbar = document.getElementById("mobile-navbar");
 
+// Initialize navbar visibility on page load
+(function initNavbar() {
+    const isMobile = window.innerWidth <= 1400;
+    if (isMobile) {
+        navbar.classList.add("hidden-navbar");
+        navbar.style.display = "none";
+        navbar.style.visibility = "hidden";
+    }
+})();
 
 (function navBarOnScroll(){
     window.addEventListener("scroll", function() {
         const current = window.scrollY;
         const isMobile = window.innerWidth <= 800;
 
-        // On mobile, always keep desktop navbar hidden
+        // On mobile, always keep desktop navbar hidden - no exceptions
         if(isMobile){
             navbar.classList.add("hidden-navbar");
             navbar.style.display = "none";
+            navbar.style.visibility = "hidden";
             lastScrollY = current;
             return;
         }
@@ -29,12 +39,14 @@ const mobileNavbar = document.getElementById("mobile-navbar");
             navbar.classList.remove("hidden-navbar");
             mobileNavbar.classList.add("hidden-navbar");
             navbar.style.display = "flex";
+            navbar.style.visibility = "visible";
         } else if (current - lastScrollY > THRESHOLD) {
             navbar.classList.add("hidden-navbar");
             navbar.style.display = "flex";
         } else if (lastScrollY - current > THRESHOLD) {
             navbar.classList.remove("hidden-navbar");
             navbar.style.display = "flex";
+            navbar.style.visibility = "visible";
         }
         lastScrollY = current;
     });
@@ -102,9 +114,14 @@ window.addEventListener("resize", function() {
         const isMobile = window.innerWidth <= 800;
         const mobileActive = !mobileNavbar.classList.contains("hidden-navbar");
         if (isMobile) {
+            // Force desktop navbar hidden on mobile
+            navbar.classList.add("hidden-navbar");
             navbar.style.display = "none";
+            navbar.style.visibility = "hidden";
         } else {
+            // On desktop, show/hide based on mobile menu state
             navbar.style.display = mobileActive ? "none" : "flex";
+            navbar.style.visibility = mobileActive ? "hidden" : "visible";
         }
     }, 200);
 });

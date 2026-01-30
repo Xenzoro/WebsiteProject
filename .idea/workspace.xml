@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Update navbar styles for improved mobile responsiveness: enhance hamburger menu and button sizes for better usability on small screens">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-files/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/css/navbar.css" afterDir="false" />
-    </list>
+    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Update navbar behavior for mobile responsiveness: ensure desktop navbar remains hidden on mobile and improve visibility management" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +78,7 @@
       <workItem from="1769627105874" duration="3172000" />
       <workItem from="1769659310433" duration="599000" />
       <workItem from="1769663664609" duration="595000" />
-      <workItem from="1769736302723" duration="3911000" />
+      <workItem from="1769736302723" duration="4994000" />
     </task>
     <task id="LOCAL-00001" summary="Rename and reorganize project files: update paths for HTML, CSS, and JS files for improved structure and accessibility">
       <option name="closed" value="true" />
@@ -155,7 +152,31 @@
       <option name="project" value="LOCAL" />
       <updated>1769745997965</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update navbar styles for improved mobile responsiveness: enhance hamburger menu size and button dimensions for better usability on small screens">
+      <option name="closed" value="true" />
+      <created>1769746548561</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1769746548561</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update navbar styles for improved accessibility: remove outlines and borders on focus and active states for better user experience">
+      <option name="closed" value="true" />
+      <created>1769746750781</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1769746750781</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update navbar behavior for mobile responsiveness: ensure desktop navbar remains hidden on mobile and improve visibility management">
+      <option name="closed" value="true" />
+      <created>1769749354355</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1769749354355</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +191,10 @@
     <MESSAGE value="Update contact section styles: adjust min-height for improved layout and enhance task summaries in workspace.xml" />
     <MESSAGE value="Update contact section styles: increase min-height for improved layout and update task summaries in workspace.xml" />
     <MESSAGE value="Update navbar styles for improved mobile responsiveness: enhance hamburger menu and button sizes for better usability on small screens" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update navbar styles for improved mobile responsiveness: enhance hamburger menu and button sizes for better usability on small screens" />
+    <MESSAGE value="Update navbar styles for improved mobile responsiveness: enhance hamburger menu size and button dimensions for better usability on small screens" />
+    <MESSAGE value="Update navbar styles for improved accessibility: remove outlines and borders on focus and active states for better user experience" />
+    <MESSAGE value="Update navbar behavior for mobile responsiveness: ensure desktop navbar remains hidden on mobile and improve visibility management" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update navbar behavior for mobile responsiveness: ensure desktop navbar remains hidden on mobile and improve visibility management" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
