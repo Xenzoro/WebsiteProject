@@ -13,7 +13,7 @@ const mobileNavbar = document.getElementById("mobile-navbar");
         const isMobile = window.innerWidth <= 800;
         if(isMobile){
             navbar.classList.add("hidden-navbar");
-            return;h
+            return;
         }
         if (mobileActive) {
             navbar.style.display = "none";
