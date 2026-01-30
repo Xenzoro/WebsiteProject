@@ -26,12 +26,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const imagesContainer = document.querySelector(".h-scroll-images");
     const imageCount = 11; // this number will or can change depending on what images i add
 
+    // Map of image indices to their correct file extensions (case-sensitive for GitHub Pages)
+    const imageExtensions = {
+        1: 'JPEG',
+        2: 'jpeg',
+        3: 'jpeg',
+        4: 'JPEG',
+        5: 'JPEG',
+        6: 'JPEG',
+        7: 'JPEG',
+        8: 'jpeg',
+        9: 'jpeg',
+        10: 'jpeg',
+        11: 'jpeg'
+    };
+
     for (let i = 1; i <= imageCount; i++) {
         const card = document.createElement("div");
         card.className = `h-scroll-card h-scroll-card-${i}`;
 
         const img = document.createElement("img");
-        img.src = `../project-files/horizontal-project-scroll-assets/img (${i}).jpeg`;
+        const ext = imageExtensions[i] || 'jpeg';
+        // Use absolute path from root to work on all pages
+        img.src = `project-files/horizontal-project-scroll-assets/img (${i}).${ext}`;
         img.alt = `Image ${i}`;
         card.appendChild(img);
 
@@ -43,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const cards = imagesContainer.querySelectorAll(".h-scroll-card");
-    cards.forEach((card, index) => {
+    cards.forEach((card) => {
         gsap.set(card, {
             z: -50000,
             scale: 0,
@@ -112,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const isAtEdge = self.progress <= 0 || self.progress >= 1;
 
-            document.querySelectorAll(".h-scroll-title").forEach((titleContainer, index) => {
+            document.querySelectorAll(".h-scroll-title").forEach((titleContainer) => {
                 const title1 = titleContainer.querySelector(".title-1");
                 const title2 = titleContainer.querySelector(".title-2");
                 const title3 = titleContainer.querySelector(".title-3");

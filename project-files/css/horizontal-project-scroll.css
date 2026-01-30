@@ -120,8 +120,8 @@ nav p span {
 }
 .h-scroll-titles{
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     width: 400vw;
     height: 20vh;
     display: flex;
@@ -199,3 +199,4 @@ h1.title-3{
         font-size: 6.5rem;
         line-height: 1.05;
     }
+}

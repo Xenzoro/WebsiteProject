@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Refactor navbar.js and add project configuration files: rename navbar.js for clarity and introduce modules.xml and workspace.xml for project management" />
+    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Refactor navbar.js and add project configuration files: rename navbar.js for clarity and introduce modules.xml and workspace.xml for project management">
+      <change beforePath="$PROJECT_DIR$/project-files/css/horizontal-project-scroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/css/horizontal-project-scroll.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +29,9 @@
     &quot;accountId&quot;: &quot;3dbb7fb6-7d6a-404a-b0c8-241e7b0411c2&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -75,7 +80,7 @@
       <workItem from="1769627105874" duration="3172000" />
       <workItem from="1769659310433" duration="599000" />
       <workItem from="1769663664609" duration="595000" />
-      <workItem from="1769736302723" duration="1613000" />
+      <workItem from="1769736302723" duration="1809000" />
     </task>
     <task id="LOCAL-00001" summary="Rename and reorganize project files: update paths for HTML, CSS, and JS files for improved structure and accessibility">
       <option name="closed" value="true" />
@@ -93,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769744188909</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactor navbar.js and add project configuration files: rename navbar.js for clarity and introduce modules.xml and workspace.xml for project management">
+      <option name="closed" value="true" />
+      <created>1769744205237</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769744205237</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
