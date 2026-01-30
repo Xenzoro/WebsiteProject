@@ -162,15 +162,15 @@ body{
 #hamburger{
 display: block;
 position: fixed;
-top: 8px;
-right: 1.5rem;
+top: 20px;
+right: 2rem;
 z-index: 1200;
     background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
 color: #fff;
 border: none;
-font-size: 2rem;
-border-radius: 8px;
-padding: 8px 16px;
+font-size: 3.5rem;
+border-radius: 12px;
+padding: 18px 28px;
 cursor: pointer;
 }
 
@@ -221,8 +221,8 @@ overflow: hidden;
 /*when the user hovers over the hamburger button*/
 #hamburger:hover
 {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     background-image: linear-gradient(to bottom right,#333333, #1c1c1c);
     display: flex;
     justify-content: center;
@@ -231,7 +231,7 @@ overflow: hidden;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     text-decoration: none;
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 3rem;
 }
 /*this is the actual vertical navbar with the buttons*/
 #mobile-navbar {
@@ -253,7 +253,7 @@ transition: transform .5s ease
 .liquid-container-mobile {
     display: flex;
     /*this is the actual element that determines the gap between each button*/
-    gap: 32px;
+    gap: 40px;
     flex-direction: column;
     /*justify-content: space-between;*/
     /*align-items: center;*/
@@ -276,9 +276,11 @@ transition: transform .5s ease
 #mobile-navbar .liquid-element-rr,
 #mobile-navbar .liquid-element-rl,
 #mobile-navbar .liquid-cont-element-rl {
-    width: 65%;
+    width: 75%;
+    height: 60px;
     margin: 8px 0;
     text-align: center;
+    font-size: 1.3rem;
 }
 
 #mobile-navbar.hidden-navbar{
@@ -290,88 +292,64 @@ transition: transform .5s ease
         left: -1.5rem;
     }
 }
-@media screen and (max-width: 800px){
-    #navbar{
-        display: none;
-    }
 
-    /*#hamburger{*/
-    /*display: none;*/
-    /*}*/
-    /*#mobile-navbar {*/
-    /*    position: fixed;*/
-    /*    top: 0;*/
-    /*    left: 0;*/
-    /*    width: 100%;*/
-    /*    z-index: 1000;*/
-    /*    background: rgba(38, 156, 212, 0.95);*/
-    /*    padding: 10px 0;*/
-    /*}*/
-}
+/* Make hamburger smaller on larger desktop screens where navbar is visible */
+@media screen and (min-width: 1201px){
 
-/* Larger hamburger menu for tablets and small screens */
-@media screen and (max-width: 600px){
     #hamburger {
-        font-size: 2.5rem;
-        padding: 12px 20px;
-        top: 12px;
+        font-size: 2rem;
+        padding: 8px 16px;
+        top: 8px;
         right: 1.5rem;
+        border-radius: 8px;
     }
 
     #hamburger:hover {
-        width: 70px;
-        height: 70px;
-        font-size: 2.2rem;
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
     }
+}
 
-    /* Make mobile navbar buttons larger */
-    #mobile-navbar .liquid-element-rr,
-    #mobile-navbar .liquid-element-rl,
-    #mobile-navbar .liquid-cont-element-rl {
-        width: 75%;
-        height: 50px;
-        font-size: 1.1rem;
-    }
-
-    #mobile-navbar .liquid-element-rr span,
-    #mobile-navbar .liquid-element-rl span,
-    #mobile-navbar .liquid-cont-element-rl span {
-        font-size: 1.1rem;
+@media screen and (max-width: 1400px){
+    #navbar{
+        display: none;
     }
 }
 
 /* Extra large hamburger for very small phones */
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
     #hamburger {
-        font-size: 3rem;
-        padding: 14px 22px;
-        top: 15px;
-        right: 1rem;
+        font-size: 4.5rem;
+        padding: 22px 35px;
+        top: 25px;
+        right: 1.5rem;
+        border-radius: 15px;
     }
 
     #hamburger:hover {
-        width: 75px;
-        height: 75px;
-        font-size: 2.5rem;
+        width: 110px;
+        height: 110px;
+        font-size: 4rem;
     }
 
     /* Make mobile navbar buttons even larger for small phones */
     #mobile-navbar .liquid-element-rr,
     #mobile-navbar .liquid-element-rl,
     #mobile-navbar .liquid-cont-element-rl {
-        width: 80%;
-        height: 55px;
-        font-size: 1.2rem;
+        width: 85%;
+        height: 75px;
+        font-size: 1.6rem;
     }
 
     #mobile-navbar .liquid-element-rr span,
     #mobile-navbar .liquid-element-rl span,
     #mobile-navbar .liquid-cont-element-rl span {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
     .liquid-container-mobile {
-        gap: 40px;
+        gap: 50px;
     }
 }
 
