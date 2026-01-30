@@ -9,12 +9,18 @@ const mobileNavbar = document.getElementById("mobile-navbar");
 (function navBarOnScroll(){
     window.addEventListener("scroll", function() {
         const current = window.scrollY;
-        const mobileActive = !mobileNavbar.classList.contains("hidden-navbar");
         const isMobile = window.innerWidth <= 800;
+
+        // On mobile, always keep desktop navbar hidden
         if(isMobile){
             navbar.classList.add("hidden-navbar");
+            navbar.style.display = "none";
+            lastScrollY = current;
             return;
         }
+
+        const mobileActive = !mobileNavbar.classList.contains("hidden-navbar");
+
         if (mobileActive) {
             navbar.style.display = "none";
             return;
@@ -48,12 +54,21 @@ hamburger.addEventListener("click", function(event){
     event.stopPropagation();
     // this is a boolean bc something can contain something or it cannot
     const isHidden = mobileNavbar.classList.contains("hidden-navbar");
+    const isMobile = window.innerWidth <= 800;
 
     mobileNavbar.classList.toggle("hidden-navbar");
-    if (isHidden) {
-        navbar.classList.add("hidden-navbar"); // Hide desktop when showing mobile
+
+    // Only manage desktop navbar visibility if not on mobile
+    if (!isMobile) {
+        if (isHidden) {
+            navbar.classList.add("hidden-navbar"); // Hide desktop when showing mobile
+        } else {
+            navbar.classList.remove("hidden-navbar"); // Show desktop when hiding mobile
+        }
     } else {
-        navbar.classList.remove("hidden-navbar"); // Show desktop when hiding mobile
+        // Ensure desktop navbar stays hidden on mobile
+        navbar.classList.add("hidden-navbar");
+        navbar.style.display = "none";
     }
 });
 })();
@@ -63,9 +78,18 @@ hamburger.addEventListener("click", function(event){
 document.addEventListener("click", function(event) {
     const isNavbar = mobileNavbar.contains(event.target);
     const isHamburger = hamburger.contains(event.target);
+    const isMobile = window.innerWidth <= 800;
+
     if (!isNavbar && !isHamburger && !mobileNavbar.classList.contains("hidden-navbar")) {
         mobileNavbar.classList.add("hidden-navbar");
-        navbar.classList.remove("hidden-navbar");
+
+        // Only show desktop navbar if not on mobile
+        if (!isMobile) {
+            navbar.classList.remove("hidden-navbar");
+        } else {
+            navbar.classList.add("hidden-navbar");
+            navbar.style.display = "none";
+        }
     }
 });
 
