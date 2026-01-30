@@ -308,3 +308,70 @@ transition: transform .5s ease
     /*    padding: 10px 0;*/
     /*}*/
 }
+
+/* Larger hamburger menu for tablets and small screens */
+@media screen and (max-width: 600px){
+    #hamburger {
+        font-size: 2.5rem;
+        padding: 12px 20px;
+        top: 12px;
+        right: 1.5rem;
+    }
+
+    #hamburger:hover {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+    }
+
+    /* Make mobile navbar buttons larger */
+    #mobile-navbar .liquid-element-rr,
+    #mobile-navbar .liquid-element-rl,
+    #mobile-navbar .liquid-cont-element-rl {
+        width: 75%;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    #mobile-navbar .liquid-element-rr span,
+    #mobile-navbar .liquid-element-rl span,
+    #mobile-navbar .liquid-cont-element-rl span {
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra large hamburger for very small phones */
+@media screen and (max-width: 400px){
+    #hamburger {
+        font-size: 3rem;
+        padding: 14px 22px;
+        top: 15px;
+        right: 1rem;
+    }
+
+    #hamburger:hover {
+        width: 75px;
+        height: 75px;
+        font-size: 2.5rem;
+    }
+
+    /* Make mobile navbar buttons even larger for small phones */
+    #mobile-navbar .liquid-element-rr,
+    #mobile-navbar .liquid-element-rl,
+    #mobile-navbar .liquid-cont-element-rl {
+        width: 80%;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+
+    #mobile-navbar .liquid-element-rr span,
+    #mobile-navbar .liquid-element-rl span,
+    #mobile-navbar .liquid-cont-element-rl span {
+        font-size: 1.2rem;
+    }
+
+    .liquid-container-mobile {
+        gap: 40px;
+    }
+}
+

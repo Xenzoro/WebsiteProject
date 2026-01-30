@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Update contact section styles: adjust min-height for improved layout and enhance task summaries in workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-files/css/contact-outro.css" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/css/contact-outro.css" afterDir="false" />
+    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Update contact section styles: increase min-height for improved layout and update task summaries in workspace.xml">
+      <change beforePath="$PROJECT_DIR$/project-files/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/css/navbar.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
       <workItem from="1769627105874" duration="3172000" />
       <workItem from="1769659310433" duration="599000" />
       <workItem from="1769663664609" duration="595000" />
-      <workItem from="1769736302723" duration="3168000" />
+      <workItem from="1769736302723" duration="3389000" />
     </task>
     <task id="LOCAL-00001" summary="Rename and reorganize project files: update paths for HTML, CSS, and JS files for improved structure and accessibility">
       <option name="closed" value="true" />
@@ -139,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769745586901</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update contact section styles: increase min-height for improved layout and update task summaries in workspace.xml">
+      <option name="closed" value="true" />
+      <created>1769745783751</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1769745783751</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +159,8 @@
     <MESSAGE value="Refactor horizontal project scroll functionality: update image paths for consistency, enhance CSS styles, and improve code readability" />
     <MESSAGE value="Update contact section styles and animations: adjust min-height for better layout and enhance scaling effects for improved interactivity" />
     <MESSAGE value="Update contact section styles: adjust min-height for improved layout and enhance task summaries in workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update contact section styles: adjust min-height for improved layout and enhance task summaries in workspace.xml" />
+    <MESSAGE value="Update contact section styles: increase min-height for improved layout and update task summaries in workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update contact section styles: increase min-height for improved layout and update task summaries in workspace.xml" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
