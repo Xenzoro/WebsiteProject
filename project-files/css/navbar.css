@@ -339,7 +339,7 @@ transition: transform .5s ease
     }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1200px){
     #navbar{
         display: none !important;
         visibility: hidden !important;

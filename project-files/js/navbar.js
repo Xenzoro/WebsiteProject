@@ -7,7 +7,7 @@ const mobileNavbar = document.getElementById("mobile-navbar");
 
 // Initialize navbar visibility on page load
 (function initNavbar() {
-    const isMobile = window.innerWidth <= 1400;
+    const isMobile = window.innerWidth <= 1200;
     if (isMobile) {
         navbar.classList.add("hidden-navbar");
         navbar.style.display = "none";
@@ -18,7 +18,7 @@ const mobileNavbar = document.getElementById("mobile-navbar");
 (function navBarOnScroll(){
     window.addEventListener("scroll", function() {
         const current = window.scrollY;
-        const isMobile = window.innerWidth <= 800;
+        const isMobile = window.innerWidth <= 1200;
 
         // On mobile, always keep desktop navbar hidden - no exceptions
         if(isMobile){
@@ -66,7 +66,7 @@ hamburger.addEventListener("click", function(event){
     event.stopPropagation();
     // this is a boolean bc something can contain something or it cannot
     const isHidden = mobileNavbar.classList.contains("hidden-navbar");
-    const isMobile = window.innerWidth <= 800;
+    const isMobile = window.innerWidth <= 1200;
 
     mobileNavbar.classList.toggle("hidden-navbar");
 
@@ -90,7 +90,7 @@ hamburger.addEventListener("click", function(event){
 document.addEventListener("click", function(event) {
     const isNavbar = mobileNavbar.contains(event.target);
     const isHamburger = hamburger.contains(event.target);
-    const isMobile = window.innerWidth <= 800;
+    const isMobile = window.innerWidth <= 1200;
 
     if (!isNavbar && !isHamburger && !mobileNavbar.classList.contains("hidden-navbar")) {
         mobileNavbar.classList.add("hidden-navbar");
@@ -111,7 +111,7 @@ let resizeTimeout;
 window.addEventListener("resize", function() {
     clearTimeout(resizeTimeout);
     resizeTimeout = window.setTimeout(() => {
-        const isMobile = window.innerWidth <= 800;
+        const isMobile = window.innerWidth <= 1200;
         const mobileActive = !mobileNavbar.classList.contains("hidden-navbar");
         if (isMobile) {
             // Force desktop navbar hidden on mobile
