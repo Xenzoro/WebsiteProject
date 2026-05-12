@@ -112,3 +112,4 @@ gsap.to(" .email-address",{
     () => animation3.reverse());
     })();
 
+
