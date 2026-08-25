@@ -136,6 +136,7 @@ body {
     gap: 8px;
     flex-wrap: wrap;
     margin-bottom: 12px;
+    width: 100%;
 }
 
 .tag {
@@ -158,12 +159,56 @@ body {
     color: #fff;
     margin-bottom: 8px;
 }
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #269cd4;
+    cursor: pointer;
+    font-family: archivo, serif;
+    transition: color 0.2s;
+}
+
+.read-more-btn:hover {
+    color: #1a6a8c;
+    text-decoration: underline;
+}
+
+.read-more-btn::after {
+    content: '▾';
+    display: inline-block;
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn.expanded::after {
+    transform: rotate(180deg);
+}
 
 .card-desc {
     font-size: 0.85rem;
     color: #aaa;
     line-height: 1.5;
     margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 6.375em;
+    transition: max-height 0.35s ease, -webkit-line-clamp 0.35s ease;
+}
+.card-desc.expanded {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    max-height: 1000px;
 }
 
 .card-footer-custom {

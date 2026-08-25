@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Add favicon link to multiple HTML files for improved branding">
+    <list default="true" id="9c77315d-6fed-4860-9bac-1747c35f8d6b" name="Changes" comment="Implement dynamic project card rendering: fetch and display project data from Supabase">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-files/css/contact-outro.css" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/css/contact-outro.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-files/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-files/js/contact-outro.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/js/contact-outro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-files/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-files/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,7 @@
   </component>
   <component name="CopilotUserSelectedChatMode">
     <option name="chatModeId" value="Agent" />
+    <option name="inlineChatModeId" value="Ask" />
   </component>
   <component name="CopilotUserSelectedModel">
     <selectedModels>
@@ -54,21 +54,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "#1 on refresh",
-    "javascript.preferred.runtime.type.id": "node",
-    "last_opened_file_path": "C:/Users/XEN/WebstormProjects/WebsiteProject",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#1 on refresh&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/XEN/WebstormProjects/WebsiteProject&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\XEN\WebstormProjects\WebsiteProject\project-files" />
@@ -231,7 +231,8 @@
     <MESSAGE value="Update navbar behavior for mobile responsiveness: ensure desktop navbar remains hidden on mobile and improve visibility management" />
     <MESSAGE value="Update navbar behavior for mobile responsiveness: adjust breakpoint to 1200px for improved visibility management" />
     <MESSAGE value="Add favicon link to multiple HTML files for improved branding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add favicon link to multiple HTML files for improved branding" />
+    <MESSAGE value="Implement dynamic project card rendering: fetch and display project data from Supabase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement dynamic project card rendering: fetch and display project data from Supabase" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
