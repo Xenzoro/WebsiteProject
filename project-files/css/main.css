@@ -192,6 +192,11 @@ body {
 .read-more-btn.expanded::after {
     transform: rotate(180deg);
 }
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .card-desc {
     font-size: 0.85rem;

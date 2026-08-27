@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const SUPABASE_URL = 'https://slapzjzdpjdjjnqtqeiy.supabase.co';
 const ANON_KEY = 'sb_publishable_yR4ZWH5CvNlmNlZBXuEAjA_VF8M_ZbF';
 
-    fetch (`${SUPABASE_URL}/rest/v1/project-cards?select=*`,{
+    fetch (`${SUPABASE_URL}/rest/v1/project-cards?select=*&order=sort_order.asc`,{
         headers: {
             'apikey': ANON_KEY,
             'Authorization': `bearer ${ANON_KEY}`
@@ -39,10 +39,11 @@ function renderCards(cards) {
                 
                 const tagsHTML = card.tools_used.map(tag => `<span class="tag">${tag}</span>`).join('');
                 
+                
                 return`
                     <div class="${colClass}">
                         <div class="${cardClass}">
-                            <div class="card-img blue">PREVIEW</div>
+                            <div class="card-img blue"> <img alt="projects cover image" src="${card.image_url}"</img></div>
                             <div class="card-body-custom">
                                 <div class="card-tags">${tagsHTML}</div>
                                 <h3 class="card-title-text">${card.title}</h3>
