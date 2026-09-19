@@ -5,6 +5,13 @@ const THRESHOLD = 8;
 const hamburger = document.getElementById("hamburger");
 const mobileNavbar = document.getElementById("mobile-navbar");
 
+// Swaps the hamburger glyph for an X (and back) so the same button visually
+// becomes the close icon instead of a separate element overlapping it
+function setHamburgerIcon(isOpen) {
+    hamburger.innerHTML = isOpen ? "&#10005;" : "&#9776;";
+    hamburger.classList.toggle("nav-open", isOpen);
+}
+
 // Initialize navbar visibility on page load
 (function initNavbar() {
     const isMobile = window.innerWidth <= 1200;
@@ -69,6 +76,7 @@ hamburger.addEventListener("click", function(event){
     const isMobile = window.innerWidth <= 1200;
 
     mobileNavbar.classList.toggle("hidden-navbar");
+    setHamburgerIcon(isHidden); // isHidden was true means the menu is now open
 
     // Only manage desktop navbar visibility if not on mobile
     if (!isMobile) {
@@ -94,6 +102,7 @@ document.addEventListener("click", function(event) {
 
     if (!isNavbar && !isHamburger && !mobileNavbar.classList.contains("hidden-navbar")) {
         mobileNavbar.classList.add("hidden-navbar");
+        setHamburgerIcon(false);
 
         // Only show desktop navbar if not on mobile
         if (!isMobile) {
@@ -113,6 +122,7 @@ window.addEventListener("resize", function() {
     resizeTimeout = window.setTimeout(() => {
         const isMobile = window.innerWidth <= 1200;
         const mobileActive = !mobileNavbar.classList.contains("hidden-navbar");
+        setHamburgerIcon(mobileActive);
         if (isMobile) {
             // Force desktop navbar hidden on mobile
             navbar.classList.add("hidden-navbar");

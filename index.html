@@ -44,12 +44,20 @@
     <div class="container">
         <div class="row align-items-center g-4">
             <div class="col-md-5 text-center">
-                <img class="profile-pic" src="project-files/selfiecropped.jpg" alt="Picture of Jacob Martinez">
+                <div class="profile-pic-wrapper">
+                    <img class="profile-pic" src="project-files/selfiecropped.jpg" alt="Picture of Jacob Martinez">
+                </div>
             </div>
             <div class="col-md-7">
-                <div class="intro-text-box">
-                    I am <span class="my-name">Jacob Martinez,</span> an aspiring Software Engineer currently studying
-                    Information Systems and Computer Science.
+                <div class="intro-content">
+                    <div class="intro-labels">
+                        <span class="intro-name-tag">Jacob Martinez</span>
+                        <span class="intro-role-tag">Aspiring Software Engineer</span>
+                    </div>
+                    <div class="intro-text-box">
+                        I love to create. I'm currently studying Information Systems and Computer Science, with hands-on experience ranging from x86 assembly to full-stack web development.
+                    </div>
+                    <a href="/resume.pdf" class="resume-btn" download><span class="resume-btn-icon" aria-hidden="true">&#11015;</span> Download Resume</a>
                 </div>
             </div>
         </div>
@@ -59,14 +67,15 @@
 <!-- Projects -->
 <section id="projects">
     <div class="container">
-        <h1 class="section-title">Web Dev <span class="blue-text">Projects</span></h1>
-        <p class="section-subtitle">Frontend &bull; Backend &bull; API Integration</p>
+        <h1 class="section-title">Featured <span class="blue-text">Projects</span></h1>
+        <p class="section-subtitle">C++ &bull; Assembly &bull; Java &bull; Web Development</p>
 
-        <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">Frontend</button>
-            <button class="filter-btn">Backend / API</button>
-            <button class="filter-btn">UI / Design</button>
+        <div class="tag-filter-container mb-5">
+            <div class="tag-search-wrapper">
+                <input type="text" id="tag-search-input" class="tag-search-input" placeholder="Search tags..." autocomplete="off">
+                <div id="tag-suggestions" class="tag-suggestions"></div>
+            </div>
+            <div id="active-tag-chips" class="active-tag-chips"></div>
         </div>
     </div>
         <!-- Row 1: Featured + 1 -->
@@ -87,10 +96,11 @@
                 <div class="col-md-4 text-center mb-3 mb-md-0">
                     <img class="contact-pic" src="project-files/selfie2.JPG" alt="Jacob Martinez">
                 </div>
-                <div class="col-md-8 d-flex flex-column align-items-center gap-3">
+                <div class="col-md-8 d-flex flex-column align-items-center justify-content-center gap-3">
+                    <p class="contact-card-tagline">Have a project in mind? Let's talk.</p>
                     <div class="d-flex flex-column align-items-center gap-2 w-100">
                         <a href="project-files/html/contactForm.html" class="contact-btn">GET IN TOUCH</a>
-                        <a href="mailto:xxjacobmartinezxx@gmail.com" class="email-link-text">xxjacobmartinezxx@gmail.com</a>
+                        <span class="contact-status">Open to internships and collaboration</span>
                     </div>
                 </div>
             </div>
