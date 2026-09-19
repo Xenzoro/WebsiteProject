@@ -165,6 +165,12 @@ body {
     border: none;
 }
 
+/* Blue glow while the mobile menu is open (hamburger has become the X) */
+#hamburger.nav-open {
+    border: 2px solid #269cd4;
+    box-shadow: 0 0 18px rgba(38, 156, 212, 0.55);
+}
+
 .hamburger-element {
     position: relative;
     overflow: hidden;
@@ -205,48 +211,73 @@ body {
 /* ── Mobile Navbar ──────────────────────────── */
 #mobile-navbar {
     height: 100%;
-    width: 80%;
-    max-width: 360px;
+    width: 75%;
+    max-width: 300px;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgba(38, 156, 212, 0.85);
+    background: linear-gradient(to bottom, #262626, #1c1c1c);
+    border-left: 1px solid rgba(38, 156, 212, 0.35);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.4);
     display: flex;
     z-index: 1000;
     flex-direction: column;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #mobile-navbar.hidden-navbar {
     transform: translateX(100%);
-    transition: transform 0.5s ease;
-}
-
-#mobile-navbar.active {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: auto;
 }
 
 .liquid-container-mobile {
     display: flex;
-    gap: 40px;
     flex-direction: column;
     height: 100%;
     background: transparent;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding-top: 90px;
 }
 
 #mobile-navbar a,
 #mobile-navbar .liquid-element-rr,
 #mobile-navbar .liquid-element-rl,
 #mobile-navbar .liquid-cont-element-rl {
-    width: 75%;
-    height: 60px;
-    margin: 8px 0;
-    text-align: center;
-    font-size: 1.3rem;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 14px 28px;
+    text-align: left;
+    justify-content: flex-start;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+    background-image: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(38, 156, 212, 0.25);
+    border-left: 3px solid transparent;
+    box-shadow: none;
+    transform: none;
+    transition: background 0.2s, border-left-color 0.2s;
+}
+
+#mobile-navbar a:last-child {
+    border-bottom: none;
+}
+
+#mobile-navbar a:hover,
+#mobile-navbar a:active {
+    background: rgba(38, 156, 212, 0.28);
+    border-left-color: #269cd4;
+    border-radius: 0;
+    transform: none;
+}
+
+#mobile-navbar .liquid-element-rr::before,
+#mobile-navbar .liquid-element-rl::before,
+#mobile-navbar .liquid-cont-element-rl::before {
+    content: none;
 }
 
 /* ── Responsive ─────────────────────────────── */
@@ -291,17 +322,8 @@ body {
         height: 110px;
         font-size: 4rem;
     }
-    #mobile-navbar .liquid-element-rr,
-    #mobile-navbar .liquid-element-rl,
-    #mobile-navbar .liquid-cont-element-rl {
-        width: 85%;
-        height: 75px;
-        font-size: 1.6rem;
+    #mobile-navbar {
+        width: 78%;
+        max-width: 280px;
     }
-    #mobile-navbar .liquid-element-rr span,
-    #mobile-navbar .liquid-element-rl span,
-    #mobile-navbar .liquid-cont-element-rl span {
-        font-size: 1.6rem;
-    }
-    .liquid-container-mobile { gap: 50px; }
 }
