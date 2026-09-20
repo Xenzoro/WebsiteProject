@@ -208,6 +208,22 @@ pre[class*="language-"] {
     margin-bottom: 12px;
 }
 
+.terminal-line-notice {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: #888;
+    font-family: archivo, serif;
+    margin-bottom: 12px;
+}
+
+.terminal-line-notice-icon {
+    color: #666;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
 .terminal-input-line {
     display: flex;
     align-items: center;

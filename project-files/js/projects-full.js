@@ -115,6 +115,10 @@ function renderTerminalHTML(id) {
     `;
 }
 
+// US ASCII Map's boundary/city render is genuinely wide ASCII art — flag it
+// specifically rather than trying to detect "wide" generically from output.
+const WIDE_TERMINAL_OUTPUT_INPUTS = ['./a.out boundary.csv city.csv'];
+
 function initTerminal(id, session) {
     const body = document.getElementById(`terminal-body-${id}`);
     const input = document.getElementById(`terminal-input-${id}`);
@@ -133,12 +137,23 @@ function initTerminal(id, session) {
         body.scrollTop = body.scrollHeight;
     }
 
+    function appendNotice(text) {
+        const line = document.createElement('div');
+        line.className = 'terminal-line-notice';
+        line.innerHTML = `<span class="terminal-line-notice-icon" aria-hidden="true">&#9432;</span> ${escapeHTML(text)}`;
+        body.appendChild(line);
+        body.scrollTop = body.scrollHeight;
+    }
+
     function runCommand(value) {
         const trimmed = value.trim();
         if (!trimmed) return;
         appendLine(`$ ${trimmed}`, 'terminal-line-cmd');
         const match = session.find(pair => pair.input === trimmed);
         appendLine(match ? match.output : `command not found: ${trimmed}`, match ? 'terminal-line-output' : 'terminal-line-error');
+        if (match && WIDE_TERMINAL_OUTPUT_INPUTS.includes(match.input)) {
+            appendNotice('This output is wide, view fullscreen or on a larger screen for correct formatting.');
+        }
         input.value = '';
     }
 
