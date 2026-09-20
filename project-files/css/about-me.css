@@ -5,12 +5,18 @@
 
 * { box-sizing: border-box; }
 
+html {
+    background-color: #1c1c1c;
+}
+
 body {
-    background: linear-gradient(to bottom right, #333333, #1c1c1c);
+    background-color: #1c1c1c;
+    background-image: linear-gradient(to bottom right, #333333, #1c1c1c);
     font-family: archivo, serif;
     padding-top: 80px;
     color: #fff;
     margin: 0;
+    min-height: 100vh;
 }
 
 .container {
