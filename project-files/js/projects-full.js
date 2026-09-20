@@ -97,7 +97,7 @@ function renderProjectSection(project, index) {
 function renderTerminalHTML(id) {
     return `
         <h3 class="detail-subheading">Terminal</h3>
-        <p class="terminal-disclaimer"><span class="terminal-disclaimer-icon" aria-hidden="true">&#9432;</span> This is not a live terminal. It is real captured output from actually running my code, replayed here for demonstration.</p>
+        <p class="terminal-disclaimer"><span class="terminal-disclaimer-icon" aria-hidden="true">&#9432;</span> This is not a live terminal. It is real captured output from running my code, replayed here for demonstration.</p>
         <div class="terminal-window">
             <div class="terminal-header">
                 <span class="terminal-dot red"></span>
