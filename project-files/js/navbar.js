@@ -8,9 +8,25 @@ const mobileNavbar = document.getElementById("mobile-navbar");
 // Swaps the hamburger glyph for an X (and back) so the same button visually
 // becomes the close icon instead of a separate element overlapping it
 function setHamburgerIcon(isOpen) {
-    hamburger.innerHTML = isOpen ? "&#10005;" : "&#9776;";
+    const icon = hamburger.querySelector(".hamburger-icon");
+    if (icon) icon.innerHTML = isOpen ? "&#10005;" : "&#9776;";
     hamburger.classList.toggle("nav-open", isOpen);
 }
+
+// Mark whichever nav link (desktop or mobile) points at the current page
+(function highlightActiveNavLink() {
+    let currentFile = location.pathname.split("/").pop();
+    if (!currentFile) currentFile = "index.html";
+
+    document.querySelectorAll(".liquid-container a, .liquid-container-mobile a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (!href) return;
+        const linkFile = href.split("/").pop();
+        if (linkFile === currentFile) {
+            link.classList.add("nav-active");
+        }
+    });
+})();
 
 // Initialize navbar visibility on page load
 (function initNavbar() {
